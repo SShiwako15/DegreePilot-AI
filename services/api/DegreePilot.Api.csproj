@@ -8,5 +8,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="../../data/*.json" Link="Fixtures/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="../../policies/*" Link="Policies/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

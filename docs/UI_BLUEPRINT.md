@@ -1,7 +1,7 @@
 # DegreePilot AI — user experience blueprint
 
 ## Design intent
-A polished, accessible university SaaS application: calm navy/indigo accents, off-white surfaces, strong type hierarchy, substantial whitespace, useful data visualization and readable course cards. Avoid dummy charts, meaningless 100% progress rings, fake live statistics and institutional logos. Use real values from the synthetic database only.
+A polished, accessible university SaaS application. The user-requested Blue Mountain State University theme uses the show's Mountain Goats logo, blue/orange accents, navy navigation, white surfaces, strong type hierarchy, useful data visualization, and readable course cards. Tailwind CSS utilities provide all UI styling. See [branding sources and implementation](BRANDING.md). Avoid dummy charts, meaningless progress rings, and fake live statistics. Use real values from the synthetic database only. Keep the unofficial fictional-demo identity explicit.
 
 ## Information architecture
 - Global navigation: Dashboard, Degree Audit, Course Explorer, Semester Planner, AI Advisor; role-scoped Advisor Workspace and Admin Catalog links.

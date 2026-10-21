@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bms-blue: #001a87;
+  --color-bms-orange: #ff5500;
+  --color-bms-navy: #081640;
+  --color-bms-ink: #16213e;
+  --color-bms-muted: #53617d;
+  --color-bms-sky: #edf2ff;
+  --font-sans: "Segoe UI", Arial, sans-serif;
+  --font-display: Impact, "Arial Narrow", "Segoe UI", sans-serif;
+}

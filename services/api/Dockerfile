@@ -5,6 +5,7 @@ COPY services/api/DegreePilot.Api.csproj services/api/
 RUN dotnet restore services/api/DegreePilot.Api.csproj
 COPY services/api/ services/api/
 COPY data/ data/
+COPY policies/ policies/
 RUN dotnet publish services/api/DegreePilot.Api.csproj -c Release -o /out --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0

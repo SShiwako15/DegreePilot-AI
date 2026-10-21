@@ -1,20 +1,18 @@
-import { useEffect, useRef, useState } from 'react'
-import type { FormEvent } from 'react'
-import { ArrowDown, ArrowRight, BookOpen, Check, CheckCheck, ChevronRight, CircleHelp, ClipboardList, Compass, FileText, GraduationCap, LayoutDashboard, LockKeyhole, LogOut, Menu, ShieldCheck, Sparkles, X } from 'lucide-react'
+﻿import { useEffect, useRef, useState } from 'react'
+import { BookOpen, ChevronRight, LogOut, Menu, ShieldCheck, X } from 'lucide-react'
 import { ApiError, mutate, request } from './api'
-import type { Account, AcademicData, Audit, Bucket, CoreCourse, Course, Transcript } from './api'
-import './styles.css'
-
-type View = 'dashboard' | 'audit' | 'transcript' | 'catalog'
-const views = [
-  { id: 'dashboard', label: 'Overview', icon: LayoutDashboard },
-  { id: 'audit', label: 'Degree audit', icon: ClipboardList },
-  { id: 'transcript', label: 'My transcript', icon: FileText },
-  { id: 'catalog', label: 'Course catalog', icon: BookOpen },
-] as const
-function currentView(): View { return views.find(v => `#${v.id}` === location.hash)?.id ?? 'dashboard' }
-function Brand() { return <div className="brand"><span className="brand-icon"><Compass size={26} strokeWidth={1.6} /></span><span>DegreePilot <small>AI</small></span></div> }
-function ErrorMessage({ message }: { message: string }) { return <div className="error-message" role="alert">{message}</div> }
+import type { Account, AcademicData, Audit, Course, Transcript } from './api'
+import { currentView, views } from './navigation'
+import type { View } from './navigation'
+import { Brand, DemoBadge, ErrorMessage, SkipLink, UniversityLogo } from './components/Brand'
+import { Login } from './components/Login'
+import { Buckets, CoreList, Dashboard, ProgressSummary, SectionTitle, TranscriptView } from './components/AcademicViews'
+import { CourseExplorer } from './components/CourseExplorer'
+import { SemesterPlanner } from './components/SemesterPlanner'
+import { AdvisorChat } from './components/AdvisorChat'
+import { AdvisorWorkspace, StudentSuggestions } from './components/AdvisorWorkspace'
+import { AdminWorkspace } from './components/AdminWorkspace'
+import { eyebrow, iconButton, panel, secondaryButton } from './ui'
 
 export default function App() {
   const [account, setAccount] = useState<Account | null>(null)
@@ -26,16 +24,23 @@ export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [signingOut, setSigningOut] = useState(false)
   const heading = useRef<HTMLHeadingElement>(null)
+  const menuButton = useRef<HTMLButtonElement>(null)
+  const allowedViews = views.filter(v => account?.role === 'admin' ? v.id === 'admin' : account?.role === 'advisor' ? v.id === 'advising' : v.id !== 'admin' && v.id !== 'advising')
+  const activeView = allowedViews.some(v => v.id === view) ? view : account?.role === 'admin' ? 'admin' : account?.role === 'advisor' ? 'advising' : 'dashboard'
+
   useEffect(() => {
     const onHash = () => { setView(currentView()); setMobileOpen(false) }
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
+
   useEffect(() => {
     const controller = new AbortController()
     const options = { signal: controller.signal }
     async function load() {
-      setLoading(true); setData(null); setError('')
+      setLoading(true)
+      setData(null)
+      setError('')
       try {
         const actor = await request<Account>('/api/me', options)
         if (controller.signal.aborted) return
@@ -52,112 +57,117 @@ export default function App() {
         if (controller.signal.aborted) return
         if (cause instanceof ApiError && cause.status === 401) setAccount(null)
         else setError(cause instanceof Error ? cause.message : 'The service is unavailable.')
-      } finally { if (!controller.signal.aborted) setLoading(false) }
+      } finally {
+        if (!controller.signal.aborted) setLoading(false)
+      }
     }
     void load()
     return () => controller.abort()
   }, [refresh])
+
   function navigate(next: View) {
-    location.hash = next; setView(next); setMobileOpen(false)
+    location.hash = next
+    setView(next)
+    setMobileOpen(false)
     requestAnimationFrame(() => heading.current?.focus())
   }
+
   async function logout() {
     setSigningOut(true)
-    try { await mutate('/api/auth/logout'); setAccount(null); setData(null); setError(''); setRefresh(n => n + 1) }
-    catch (cause) {
+    try {
+      await mutate('/api/auth/logout')
+      setAccount(null)
+      setData(null)
+      setError('')
+      setRefresh(value => value + 1)
+    } catch (cause) {
       if (cause instanceof ApiError && cause.status === 401) { setAccount(null); setData(null) }
       else setError(cause instanceof Error ? cause.message : 'Sign out failed. Please retry.')
-    } finally { setSigningOut(false) }
+    } finally {
+      setSigningOut(false)
+    }
   }
-  if (!account) return <><a className="skip-link" href="#main">Skip to content</a><Login loading={loading} error={error} onLogin={() => setRefresh(n => n + 1)} onRetry={() => setRefresh(n => n + 1)} /></>
-  const title = views.find(v => v.id === view)!.label
-  return <div className="app-shell">
-    <a className="skip-link" href="#main">Skip to content</a>
-    <div className="mobile-bar"><Brand /><button className="icon-button" aria-label={mobileOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={mobileOpen} aria-controls="sidebar" onClick={() => setMobileOpen(!mobileOpen)}>{mobileOpen ? <X /> : <Menu />}</button></div>
-    <aside className={`sidebar ${mobileOpen ? 'is-open' : ''}`} id="sidebar" onKeyDown={event => {
-      if (event.key === 'Escape') {
-        setMobileOpen(false)
-        document.querySelector<HTMLButtonElement>('[aria-controls="sidebar"]')?.focus()
-      }
-    }}>
-      <Brand /><div className="institution"><span className="institution-mark"><GraduationCap size={21} /></span><div>Northstar University<small>Fictional institution</small></div></div>
-      <p className="nav-label">YOUR WORKSPACE</p>
-      <nav aria-label="Main navigation">{views.map(item => <a key={item.id} href={`#${item.id}`} aria-current={view === item.id ? 'page' : undefined} onClick={event => { event.preventDefault(); navigate(item.id) }}><item.icon size={19} /><span>{item.label}</span>{view === item.id && <span className="nav-dot" />}</a>)}
-        <div className="nav-unavailable" aria-label="Semester planner, unavailable"><GraduationCap size={19} /><span>Semester planner</span><LockKeyhole size={13} /></div>
-        <div className="nav-unavailable" aria-label="AI advisor, unavailable"><Sparkles size={19} /><span>AI advisor</span><LockKeyhole size={13} /></div>
-      </nav>
-      <div className="sidebar-bottom"><div className="demo-note"><ShieldCheck size={20} /><strong>A space to explore.</strong><p>Made with fictional records.<br />Never official academic advice.</p></div>
-        <div className="account"><span className="avatar">{account.displayName.split(' ').slice(0, 2).map(n => n[0]).join('')}</span><div><strong>{account.displayName.replace(' (fictional)', '')}</strong><small>{account.role === 'student' ? 'Demo student' : `Demo ${account.role}`}</small></div><button className="icon-button" aria-label="Sign out" title="Sign out" disabled={signingOut} onClick={() => void logout()}><LogOut size={18} /></button></div></div>
-    </aside>
-    <div className="workspace">
-      <header className="topbar"><div><span>My workspace</span><ChevronRight size={14} /><strong>{title}</strong></div><span className="demo-pill"><span /> Demo environment</span></header>
-      <main id="main" tabIndex={-1}>
-        <div className="page-heading"><div><p className="eyebrow">YOUR DEGREE, IN VIEW</p><h1 ref={heading} tabIndex={-1}>{view === 'dashboard' ? `Your next chapter, ${account.displayName.split(' ')[0]}.` : title}</h1><p>{view === 'dashboard' ? 'See how far you’ve come. Know what comes next.' : view === 'audit' ? 'Every requirement, with the rules behind it.' : view === 'transcript' ? 'Your complete course history, including every attempt.' : 'Explore the courses in your assigned catalog.'}</p></div>{account.catalogVersion && <span className="catalog-tag"><BookOpen size={15} /> {account.catalogVersion}</span>}</div>
-        {error && <><ErrorMessage message={error} /><button className="secondary-button" onClick={() => setRefresh(n => n + 1)}>Try again</button></>}
-        {loading && <div className="loading-panel" role="status">Loading your academic records…</div>}
-        {!loading && account.role !== 'student' && <section className="panel empty-state"><ShieldCheck /><h2>Student workspace</h2><p>You’re signed in as a demo {account.role}. Advisor and administrator workflows are not available in this phase. Student records remain restricted.</p></section>}
-        {!loading && data && <>
-          {data.audit.status === 'invalid' ? <section className="panel" role="alert"><h2>We couldn’t calculate this audit</h2><p>No credits or completion decision are shown because the source records need attention.</p><ul>{data.audit.issues.map((issue, i) => <li key={i}><strong>{issue.code}</strong>: {issue.message}</li>)}</ul></section> : <>
-            {view === 'dashboard' && <Dashboard account={account} data={data} navigate={navigate} />}
-            {view === 'audit' && <><ProgressSummary audit={data.audit} /><section className="panel section-panel"><SectionTitle eyebrow="DEGREE REQUIREMENTS" title="Four paths. One degree." /><Buckets buckets={data.audit.buckets} /><p className="fine-print">Every category and the total credit minimum must be met. Each course counts in exactly one category.</p></section><CoreList courses={data.audit.coreRequirements} /></>}
+
+  if (!account) return <><SkipLink /><Login loading={loading} error={error} onLogin={() => setRefresh(value => value + 1)} onRetry={() => setRefresh(value => value + 1)} /></>
+  const title = views.find(item => item.id === activeView)!.label
+  const description = view === 'dashboard' ? 'See how far you’ve come. Know what comes next.'
+    : view === 'audit' ? 'Every requirement, with the rules behind it.'
+      : view === 'transcript' ? 'Your complete course history, including every attempt.'
+        : view === 'planner' ? 'A valid next semester starts with clear constraints.'
+          : view === 'advisor' ? 'Understand your audit with approved sources beside every answer.' : 'Explore courses and machine-checked eligibility in your catalog.'
+
+  return (
+    <div className="min-h-dvh">
+      <SkipLink />
+      <div className="flex h-16 items-center justify-between bg-bms-navy px-4 text-white lg:hidden">
+        <Brand />
+        <button ref={menuButton} className={iconButton} aria-label={mobileOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={mobileOpen} aria-controls="sidebar" onClick={() => setMobileOpen(!mobileOpen)}>{mobileOpen ? <X /> : <Menu />}</button>
+      </div>
+      <aside
+        id="sidebar"
+        className={`absolute inset-x-0 top-16 z-30 max-h-[calc(100dvh-4rem)] flex-col overflow-y-auto border-b-4 border-bms-orange bg-bms-navy px-5 py-5 text-white shadow-lg lg:fixed lg:inset-y-0 lg:left-0 lg:right-auto lg:flex lg:max-h-none lg:w-64 lg:border-b-0 lg:py-8 lg:shadow-none ${mobileOpen ? 'flex' : 'hidden'}`}
+        onKeyDown={event => {
+          if (event.key === 'Escape') { setMobileOpen(false); menuButton.current?.focus() }
+        }}
+      >
+        <div className="hidden lg:block"><Brand /></div>
+        <div className="my-6 flex items-center gap-3 border-y border-white/15 py-5 lg:mt-9">
+          <UniversityLogo className="size-16 rounded-lg bg-white" />
+          <div className="text-xs font-semibold leading-5">Blue Mountain State<br />University<span className="mt-1 block text-[10px] font-normal text-blue-200">Fictional institution</span></div>
+        </div>
+        <p className="mb-3 px-3 text-[10px] font-semibold tracking-[0.18em] text-blue-200">YOUR WORKSPACE</p>
+        <nav aria-label="Main navigation" className="flex flex-col gap-1.5">
+          {allowedViews.map(item => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              aria-current={activeView === item.id ? 'page' : undefined}
+              onClick={event => { event.preventDefault(); navigate(item.id) }}
+              className={`flex min-h-12 items-center gap-3 rounded-lg border-l-3 px-3 py-3 text-xs ${activeView === item.id ? 'border-bms-orange bg-white/10 font-semibold text-white' : 'border-transparent text-blue-100 hover:bg-white/5'}`}
+            >
+              <item.icon size={18} className={activeView === item.id ? 'text-bms-orange' : ''} /><span>{item.label}</span>
+            </a>
+          ))}
+        </nav>
+        <div className="mt-auto pt-6 lg:pt-10">
+          <div className="mb-5 hidden rounded-xl border border-white/15 bg-white/5 p-4 lg:block"><ShieldCheck size={19} className="mb-2 text-bms-orange" /><strong className="text-xs">A space to explore.</strong><p className="mt-2 text-[11px] leading-5 text-blue-200">Fictional records. Real clarity.<br />Unofficial Blue Mountain State fan demo.</p></div>
+          <div className="flex items-center gap-2 border-t border-white/15 pt-5">
+            <span className="grid size-9 shrink-0 place-items-center rounded-full border border-white/20 bg-white/10 text-xs font-semibold text-orange-200">{account.displayName.split(' ').slice(0, 2).map(name => name[0]).join('')}</span>
+            <div className="min-w-0 flex-1"><strong className="text-xs">{account.displayName.replace(' (fictional)', '')}</strong><small className="mt-1 block text-[10px] text-blue-200">Demo {account.role}</small></div>
+            <button className={iconButton} aria-label="Sign out" title="Sign out" disabled={signingOut} onClick={() => void logout()}><LogOut size={18} /></button>
+          </div>
+        </div>
+      </aside>
+      <div className="lg:ml-64">
+        <header className="flex min-h-16 flex-wrap items-center justify-between gap-3 border-b border-slate-200 bg-white px-4 py-3 sm:px-8 lg:px-10">
+          <div className="flex items-center gap-2 text-[11px] sm:gap-3"><span className="text-bms-muted">My workspace</span><ChevronRight size={13} className="text-slate-400" /><strong className="font-medium">{title}</strong></div>
+          <DemoBadge />
+        </header>
+        <main id="main" tabIndex={-1} className="mx-auto max-w-7xl px-4 py-7 sm:px-8 lg:px-10 lg:py-9">
+          <div className="mb-7 flex flex-wrap items-center justify-between gap-4">
+            <div><p className={`mb-2 ${eyebrow}`}>BLUE MOUNTAIN STATE UNIVERSITY</p><h1 ref={heading} tabIndex={-1} className="rounded-sm text-2xl font-semibold tracking-tight sm:text-3xl">{activeView === 'dashboard' ? `Your next chapter, ${account.displayName.split(' ')[0]}.` : title}</h1><p className="mt-2 text-xs leading-6 text-bms-muted sm:text-sm">{account.role === 'student' ? description : 'Scoped access. Reviewed changes. A clear history.'}</p></div>
+            {account.catalogVersion && <span className="hidden items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-[11px] text-bms-muted xl:flex"><BookOpen size={15} className="text-bms-blue" />{account.catalogVersion}</span>}
+          </div>
+          {error && <><ErrorMessage message={error} /><button className={secondaryButton} onClick={() => setRefresh(value => value + 1)}>Try again</button></>}
+          {loading && <div className="rounded-xl border border-blue-100 bg-bms-sky p-10 text-center text-sm text-bms-blue" role="status">Loading your academic records…</div>}
+          {!loading && account.role === 'advisor' && <AdvisorWorkspace key={account.id} />}
+          {!loading && account.role === 'admin' && <AdminWorkspace key={account.id} />}
+          {!loading && data && <>
+            {data.audit.status === 'invalid' ? <section className={`${panel} mb-6`} role="alert"><h2 className="text-lg font-semibold">We couldn’t calculate this audit</h2><p className="mt-3 text-sm leading-6 text-bms-muted">No credits or completion decision are shown because the source records need attention.</p><ul className="mt-4 list-inside list-disc space-y-2 text-sm text-red-900">{data.audit.issues.map((issue, index) => <li key={index}><strong>{issue.code}</strong>: {issue.message}</li>)}</ul></section> : <>
+              {activeView === 'dashboard' && <Dashboard account={account} data={data} navigate={navigate} />}
+              {view === 'audit' && <div className="space-y-6"><ProgressSummary audit={data.audit} /><section className={panel}><SectionTitle label="DEGREE REQUIREMENTS" title="Four paths. One degree." /><Buckets buckets={data.audit.buckets} /><p className="mt-6 text-xs leading-6 text-bms-muted">Every category and the total credit minimum must be met. Each course counts in exactly one category.</p></section><CoreList courses={data.audit.coreRequirements} /></div>}
+            </>}
+            {view === 'transcript' && <TranscriptView transcript={data.transcript} audit={data.audit} />}
+            {view === 'catalog' && <CourseExplorer key={account.id} />}
+            {view === 'planner' && <><SemesterPlanner key={account.id} /><StudentSuggestions studentId={account.id} /></>}
+            {view === 'advisor' && <AdvisorChat key={account.id} catalogVersion={account.catalogVersion!} />}
+            <footer className="mt-7 flex flex-wrap items-start justify-between gap-3 border-t border-slate-200 pt-5 text-[10px] leading-5 text-bms-muted">
+              <span className="flex items-center gap-2"><ShieldCheck size={14} className="shrink-0 text-bms-blue" />Demo catalog — not official advising</span>
+              <span>{data.audit.catalogVersion} · Rules {data.audit.ruleEngineVersion}<br />Calculated <time dateTime={data.audit.generatedAt}>{new Date(data.audit.generatedAt).toLocaleString()}</time></span>
+            </footer>
           </>}
-          {view === 'transcript' && <TranscriptView transcript={data.transcript} audit={data.audit} />}
-          {view === 'catalog' && <CatalogView courses={data.courses} />}
-          <footer className="page-footer"><span><ShieldCheck size={14} /> Demo catalog — not official advising</span><span>{data.audit.catalogVersion} · Rules {data.audit.ruleEngineVersion}<br />Calculated <time dateTime={data.audit.generatedAt}>{new Date(data.audit.generatedAt).toLocaleString()}</time></span></footer>
-        </>}
-      </main>
+        </main>
+      </div>
     </div>
-  </div>
-}
-
-function Login({ loading, error, onLogin, onRetry }: { loading: boolean; error: string; onLogin: () => void; onRetry: () => void }) {
-  const [username, setUsername] = useState('student-ava')
-  const [password, setPassword] = useState('')
-  const [submitting, setSubmitting] = useState(false)
-  const [loginError, setLoginError] = useState('')
-  async function submit(event: FormEvent) {
-    event.preventDefault(); setSubmitting(true); setLoginError('')
-    try { await mutate('/api/auth/login', { username, password }); setPassword(''); onLogin() }
-    catch (cause) { setLoginError(cause instanceof Error ? cause.message : 'Sign-in failed.') }
-    finally { setSubmitting(false) }
-  }
-  return <div className="login-layout"><section className="login-story"><Brand /><div><p className="eyebrow">A LITTLE CLARITY. A LOT OF POSSIBILITY.</p><h1>Your degree.<br />A clearer direction.</h1><p>A thoughtful home for your academic journey.<br />Understand your progress, one requirement at a time.</p><div className="journey-illustration" aria-hidden="true"><span><CheckCheck /></span><i /><span><BookOpen /></span><i /><span><GraduationCap /></span></div></div><small>Northstar University · Fictional academic demonstration</small></section>
-    <main className="login-main" id="main" tabIndex={-1}><div className="login-card"><span className="demo-pill"><span /> LOCAL DEMO</span><h2>Welcome to your workspace.</h2><p>Sign in with a fictional account to explore your degree progress.</p>
-      {loading ? <p role="status">Checking your session…</p> : <>{error && <><ErrorMessage message={error} /><button className="text-button" onClick={onRetry}>Retry connection</button></>}
-        <form onSubmit={event => void submit(event)}><label htmlFor="username">Demo account</label><select id="username" autoComplete="username" value={username} onChange={e => setUsername(e.target.value)}><option value="student-ava">Ava Chen · Student</option><option value="student-noah">Noah Rivera · Student</option><option value="advisor-morgan">Morgan Lee · Advisor (limited)</option><option value="admin-robin">Robin Patel · Admin (limited)</option></select><label htmlFor="password">Demo password</label><input id="password" type="password" autoComplete="current-password" required value={password} onChange={e => setPassword(e.target.value)} aria-describedby="password-help" /><small id="password-help">Use the local demo password from your setup instructions.</small>{loginError && <ErrorMessage message={loginError} />}<button className="primary-button" disabled={submitting}>{submitting ? 'Signing in…' : 'Open my workspace'}<ArrowRight size={18} /></button></form>
-      </>}<div className="login-disclaimer"><ShieldCheck size={20} /><p>All people, courses and policies in this demo are fictional. Please don’t enter real student records.</p></div></div></main></div>
-}
-
-function SectionTitle({ eyebrow, title, children }: { eyebrow?: string; title: string; children?: React.ReactNode }) {
-  return <div className="section-heading"><div>{eyebrow && <p className="eyebrow">{eyebrow}</p>}<h2>{title}</h2></div>{children}</div>
-}
-function ProgressSummary({ audit }: { audit: Audit }) {
-  const earned = audit.earnedCredits ?? 0
-  const required = audit.requiredCredits ?? 0
-  const percentage = required > 0 ? Math.min(100, Math.round(earned / required * 100)) : 0
-  return <section className="progress-summary panel"><div><span className="status-pill"><span /> {audit.degreeComplete ? 'Demo requirements satisfied' : 'Your degree is in progress'}</span><h2>B.S. Computer Science</h2><p>Every completed course brings you closer.</p><div className="credit-total"><strong>{earned}</strong><span>/ {required} credits earned</span></div><p className="credit-remaining"><ArrowRight size={15} /> {Math.max(0, required - earned)} credits to your degree minimum</p></div><div className="progress-ring" role="img" aria-label={`${percentage}% of total degree credits earned`}><svg viewBox="0 0 160 160" aria-hidden="true"><circle className="ring-track" cx="80" cy="80" r="67" /><circle className="ring-fill" cx="80" cy="80" r="67" pathLength="100" strokeDasharray={`${percentage} 100`} /></svg><div><strong>{percentage}<small>%</small></strong><span>of the journey</span></div></div></section>
-}
-function Buckets({ buckets }: { buckets: Bucket[] }) {
-  return <div className="buckets">{buckets.map(bucket => <div className={`bucket bucket-${bucket.id}`} key={bucket.id}><div><strong>{bucket.label}</strong><span>{bucket.earned} <small>/ {bucket.required}</small></span></div><progress aria-label={`${bucket.label} credits`} value={Math.min(bucket.earned, bucket.required)} max={bucket.required || 1} /><small>{bucket.complete ? 'Requirement satisfied' : `${bucket.remaining} credits remaining`}</small></div>)}</div>
-}
-function Dashboard({ account, data, navigate }: { account: Account; data: AcademicData; navigate: (view: View) => void }) {
-  const { audit } = data
-  const completed = audit.coreRequirements.filter(c => c.complete).length
-  const remaining = audit.coreRequirements.filter(c => !c.complete)
-  return <>
-    <div className="overview-grid"><ProgressSummary audit={audit} /><section className="panel snapshot"><SectionTitle eyebrow="AT A GLANCE" title="Your academic snapshot" /><dl><div><dt><GraduationCap size={18} /> Core courses</dt><dd>{completed}<span> / {audit.coreRequirements.length}</span></dd></div><div><dt><BookOpen size={18} /> Courses with credit</dt><dd>{audit.earnedCourses.length}</dd></div><div><dt><ClipboardList size={18} /> Cumulative demo GPA</dt><dd>{audit.gpa?.toFixed(2) ?? '—'}<span> / 4.00</span></dd></div></dl><p className="fine-print">GPA includes all letter-graded attempts, including repeats. Credits count once.</p></section></div>
-    <section className="panel section-panel"><SectionTitle eyebrow="BUILDING YOUR DEGREE" title="A little progress in every direction"><button className="text-button" onClick={() => navigate('audit')}>View full audit <ArrowRight size={16} /></button></SectionTitle><Buckets buckets={audit.buckets} /></section>
-    <div className="detail-grid"><section className="panel section-panel"><SectionTitle eyebrow="WHAT’S STILL AHEAD" title="Your remaining core"><span className="count-pill">{remaining.length} courses</span></SectionTitle><p className="muted intro-text">Required courses you haven’t completed with a C or better.</p><div className="course-preview">{remaining.slice(0, 4).map(c => <div key={c.code}><span className="course-symbol"><BookOpen size={18} /></span><div><strong>{c.code}</strong><p>{c.title}</p></div><span>{c.credits} cr</span></div>)}</div>{remaining.length === 0 && <p>All required core courses are complete.</p>}<button className="text-button bottom-link" onClick={() => navigate('audit')}>See all core requirements <ArrowRight size={16} /></button></section>
-      <div className="right-stack"><section className="next-steps"><p className="eyebrow">A GOOD PLACE TO START</p><h2>Make your next step<br />an informed one.</h2><button onClick={() => navigate('audit')}><span>01</span><div><strong>Understand your requirements</strong><small>See each category and what remains.</small></div><ArrowRight size={17} /></button><button onClick={() => navigate('transcript')}><span>02</span><div><strong>Look back at your coursework</strong><small>Review completed courses and grades.</small></div><ArrowRight size={17} /></button><button onClick={() => navigate('catalog')}><span>03</span><div><strong>Get to know the catalog</strong><small>Read the courses in your catalog year.</small></div><ArrowRight size={17} /></button></section><section className="ai-notice"><Sparkles size={21} /><div><h3>A thoughtful advisor, coming later.</h3><p>{account.ai.reason} Semester planning is also unavailable in this phase.</p></div></section></div></div>
-    <div className="audit-note"><CircleHelp size={17} /><p>How is this calculated? Your audit follows the fixed rules in your assigned catalog, with no AI decisions. <button className="inline-link" onClick={() => navigate('audit')}>Explore the breakdown</button></p></div>
-  </>
-}
-function CoreList({ courses }: { courses: CoreCourse[] }) {
-  return <section className="panel section-panel"><SectionTitle eyebrow="THE FOUNDATION" title="Required core courses"><span className="count-pill">{courses.filter(c => c.complete).length} of {courses.length} complete</span></SectionTitle><p className="muted">Every listed course requires a letter grade of C or better.</p><ul className="core-list">{courses.map(c => <li key={c.code}><span className={`completion-icon ${c.complete ? 'complete' : ''}`}>{c.complete ? <Check size={16} /> : <span />}</span><div><strong>{c.code}</strong><p>{c.title}</p></div><span className="core-credit">{c.credits} cr</span><span className={`course-status ${c.complete ? 'complete' : ''}`}>{c.complete ? `Completed · ${c.grade}` : 'Still required'}</span></li>)}</ul></section>
-}
-function TranscriptView({ transcript, audit }: { transcript: Transcript; audit: Audit }) {
-  return <section className="panel section-panel"><SectionTitle eyebrow="YOUR COURSE HISTORY" title="Every attempt, in one place"><span className="count-pill">{transcript.attempts.length} attempts</span></SectionTitle><p className="muted">C or better earns credit. Repeated courses count once; D/F affect GPA but earn no credit. W/I earn no credit or GPA points. P requires explicit elective approval.</p>{transcript.attempts.length === 0 ? <p>No course attempts recorded yet.</p> : <div className="table-wrap" role="region" aria-label="Transcript table" tabIndex={0}><table><caption className="sr-only">Academic transcript, most recent term first</caption><thead><tr><th scope="col">Course</th><th scope="col">Term <ArrowDown size={12} /></th><th scope="col">Course credits</th><th scope="col">Grade</th></tr></thead><tbody>{transcript.attempts.map(a => <tr key={`${a.term}-${a.courseCode}`}><td><strong>{a.courseCode}</strong><span>{a.title}</span></td><td>{a.term}</td><td>{a.credits}</td><td><span className={`grade ${['A', 'B', 'C'].includes(a.grade) ? 'passing' : ''}`}>{a.grade}</span></td></tr>)}</tbody></table></div>}<p className="fine-print">Demo GPA: {audit.gpa?.toFixed(2) ?? 'unavailable'}. All attempts are retained. Transfer equivalency is not supported.</p></section>
-}
-function CatalogView({ courses }: { courses: Course[] }) {
-  return <><div className="catalog-intro"><BookOpen size={20} /><p>These are fictional catalog descriptions. Eligibility checks, published sections and planning will be added in a later phase.</p></div>{courses.length === 0 ? <section className="panel empty-state">No courses are available in this catalog.</section> : <div className="catalog-grid">{courses.map(course => <article className="panel catalog-course" key={course.code}><div><span className="course-code">{course.code}</span><span>{course.credits} credits</span></div><h2>{course.title}</h2><span className="category-label">{course.category.replaceAll('_', ' ')}</span><p>Catalog offerings: {course.offeredTerms.join(' · ') || 'Not specified'}</p></article>)}</div>}</>
+  )
 }

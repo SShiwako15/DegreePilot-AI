@@ -54,6 +54,11 @@ public static class CatalogValidator
                 Invalid($"Course {course.Code} references missing or malformed prerequisites.");
         }
         if (issues.Count > 0) return issues;
+        if (program.MinTotalCredits > courses.Sum(c => c.Credits) ||
+            program.MinCsElectiveCredits > courses.Where(c => c.Category == "cs_elective").Sum(c => c.Credits) ||
+            program.MinGenEdCredits > courses.Where(c => c.Category == "gen_ed").Sum(c => c.Credits) ||
+            program.MinFreeElectiveCredits > courses.Where(c => c.Category == "free_elective").Sum(c => c.Credits))
+            Invalid("The catalog cannot supply its required total or category credits.");
         // Validate dependency data at import; eligibility evaluation is deferred to Phase 2.
         var visiting = new HashSet<string>();
         var visited = new HashSet<string>();

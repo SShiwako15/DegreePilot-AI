@@ -16,5 +16,14 @@
     "ends_on": "2027-12-17",
     "timezone": "America/New_York",
     "is_published": true
+  },
+  {
+    "code": "2028-SPRING",
+    "name": "Spring 2028 (projected)",
+    "kind": "Spring",
+    "starts_on": "2028-01-17",
+    "ends_on": "2028-05-12",
+    "timezone": "America/New_York",
+    "is_published": false
   }
 ]

@@ -25,6 +25,8 @@ services:
       ConnectionStrings__Database: Host=postgres;Database=${POSTGRES_DB:-degreepilot};Username=${POSTGRES_USER:-degreepilot};Password=${POSTGRES_PASSWORD:-local-fictional-database-only}
       Demo__Enabled: "true"
       Demo__Password: ${DEMO_PASSWORD:-Local-Demo-Only!2026}
+      Planner__BaseUrl: http://planner:8000/
+      Security__LoginRequestsPerMinute: ${Security__LoginRequestsPerMinute:-20}
     depends_on:
       postgres:
         condition: service_healthy
@@ -44,6 +46,22 @@ services:
         condition: service_healthy
     healthcheck:
       test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/health/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+  planner:
+    build:
+      context: .
+      dockerfile: services/ai/Dockerfile
+    read_only: true
+    environment:
+      AI_ADVISOR_ENABLED: ${AI_ADVISOR_ENABLED:-false}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4.1-mini}
+    tmpfs:
+      - /tmp
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=2)"]
       interval: 10s
       timeout: 5s
       retries: 6

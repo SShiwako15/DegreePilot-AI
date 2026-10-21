@@ -22,6 +22,108 @@ namespace DegreePilot.Api.Persistence.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("DegreePilot.Api.Persistence.AcademicTerm", b =>
+                {
+                    b.Property<string>("Code")
+                        .HasColumnType("text");
+
+                    b.Property<DateOnly>("EndsOn")
+                        .HasColumnType("date");
+
+                    b.Property<bool>("IsPublished")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Kind")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateOnly>("StartsOn")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Timezone")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Code");
+
+                    b.ToTable("Terms", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_Term_Dates", "\"StartsOn\" < \"EndsOn\"");
+
+                            t.HasCheckConstraint("CK_Term_Kind", "\"Kind\" IN ('Spring','Fall')");
+                        });
+                });
+
+            modelBuilder.Entity("DegreePilot.Api.Persistence.AdvisorAssignment", b =>
+                {
+                    b.Property<string>("AdvisorId")
+                        .HasColumnType("text");
+
+                    b.Property<string>("StudentId")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("boolean");
+
+                    b.Property<int>("Revision")
+                        .IsConcurrencyToken()
+                        .HasColumnType("integer");
+
+                    b.HasKey("AdvisorId", "StudentId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("AdvisorAssignments");
+                });
+
+            modelBuilder.Entity("DegreePilot.Api.Persistence.AdvisorSuggestion", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("AdvisorId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("CatalogVersion")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ConstraintsJson")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("SelectionIdsJson")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("StudentId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TermCode")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdvisorId");
+
+                    b.HasIndex("TermCode");
+
+                    b.HasIndex("StudentId", "CatalogVersion");
+
+                    b.ToTable("AdvisorSuggestions");
+                });
+
             modelBuilder.Entity("DegreePilot.Api.Persistence.AppUser", b =>
                 {
                     b.Property<string>("Id")
@@ -96,9 +198,17 @@ namespace DegreePilot.Api.Persistence.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("text");
 
+                    b.Property<string>("ApprovalHash")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("ProgramId")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<int>("Revision")
+                        .IsConcurrencyToken()
+                        .HasColumnType("integer");
 
                     b.Property<string>("RulesJson")
                         .IsRequired()
@@ -108,9 +218,79 @@ namespace DegreePilot.Api.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Catalogs");
+                    b.ToTable("Catalogs", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_Catalog_Status", "\"Status\" IN ('draft','published')");
+                        });
+                });
+
+            modelBuilder.Entity("DegreePilot.Api.Persistence.CourseSection", b =>
+                {
+                    b.Property<string>("CatalogVersion")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
+
+                    b.Property<int>("AvailableSeats")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Capacity")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("CourseCode")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("DaysJson")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Delivery")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("EndLocal")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("SectionCode")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("StartLocal")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TermCode")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Timezone")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("CatalogVersion", "Id");
+
+                    b.HasIndex("TermCode");
+
+                    b.HasIndex("CatalogVersion", "CourseCode");
+
+                    b.HasIndex("CatalogVersion", "TermCode", "SectionCode")
+                        .IsUnique();
+
+                    b.ToTable("Sections", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_Section_Seats", "\"Capacity\" > 0 AND \"AvailableSeats\" >= 0 AND \"AvailableSeats\" <= \"Capacity\"");
+
+                            t.HasCheckConstraint("CK_Section_Times", "\"StartLocal\" < \"EndLocal\"");
+                        });
                 });
 
             modelBuilder.Entity("DegreePilot.Api.Persistence.EnrollmentAttempt", b =>
@@ -154,6 +334,151 @@ namespace DegreePilot.Api.Persistence.Migrations
                         });
                 });
 
+            modelBuilder.Entity("DegreePilot.Api.Persistence.MutationAudit", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Action")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ActorId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ContentHash")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTimeOffset>("OccurredAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("ResourceId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Revision")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ActorId");
+
+                    b.HasIndex("OccurredAt");
+
+                    b.ToTable("MutationAudits");
+                });
+
+            modelBuilder.Entity("DegreePilot.Api.Persistence.PolicyDocument", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ApprovalHash")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("CatalogVersion")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ReplacesDocumentId")
+                        .HasColumnType("text");
+
+                    b.Property<int>("Revision")
+                        .IsConcurrencyToken()
+                        .HasColumnType("integer");
+
+                    b.Property<string>("SourceHash")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Version")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CatalogVersion");
+
+                    b.HasIndex("ReplacesDocumentId");
+
+                    b.ToTable("PolicyDocuments", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_Policy_Status", "\"Status\" IN ('draft','approved','retired')");
+
+                            t.HasCheckConstraint("CK_Policy_Version", "\"Version\" > 0");
+                        });
+                });
+
+            modelBuilder.Entity("DegreePilot.Api.Persistence.PolicySection", b =>
+                {
+                    b.Property<string>("DocumentId")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("DocumentId", "Id");
+
+                    b.ToTable("PolicySections");
+                });
+
+            modelBuilder.Entity("DegreePilot.Api.Persistence.SchedulePlan", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CatalogVersion")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ConstraintsJson")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("SelectionIdsJson")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("StudentId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TermCode")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TermCode");
+
+                    b.HasIndex("StudentId", "CatalogVersion");
+
+                    b.ToTable("Plans");
+                });
+
             modelBuilder.Entity("DegreePilot.Api.Persistence.StudentProfile", b =>
                 {
                     b.Property<string>("UserId")
@@ -170,6 +495,43 @@ namespace DegreePilot.Api.Persistence.Migrations
                     b.ToTable("Students");
                 });
 
+            modelBuilder.Entity("DegreePilot.Api.Persistence.AdvisorAssignment", b =>
+                {
+                    b.HasOne("DegreePilot.Api.Persistence.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("AdvisorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("DegreePilot.Api.Persistence.StudentProfile", null)
+                        .WithMany()
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("DegreePilot.Api.Persistence.AdvisorSuggestion", b =>
+                {
+                    b.HasOne("DegreePilot.Api.Persistence.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("AdvisorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("DegreePilot.Api.Persistence.AcademicTerm", null)
+                        .WithMany()
+                        .HasForeignKey("TermCode")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("DegreePilot.Api.Persistence.StudentProfile", null)
+                        .WithMany()
+                        .HasForeignKey("StudentId", "CatalogVersion")
+                        .HasPrincipalKey("UserId", "CatalogVersion")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("DegreePilot.Api.Persistence.CatalogCourse", b =>
                 {
                     b.HasOne("DegreePilot.Api.Persistence.CatalogEdition", null)
@@ -179,11 +541,74 @@ namespace DegreePilot.Api.Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("DegreePilot.Api.Persistence.CourseSection", b =>
+                {
+                    b.HasOne("DegreePilot.Api.Persistence.AcademicTerm", null)
+                        .WithMany()
+                        .HasForeignKey("TermCode")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("DegreePilot.Api.Persistence.CatalogCourse", null)
+                        .WithMany()
+                        .HasForeignKey("CatalogVersion", "CourseCode")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("DegreePilot.Api.Persistence.EnrollmentAttempt", b =>
                 {
                     b.HasOne("DegreePilot.Api.Persistence.CatalogCourse", null)
                         .WithMany()
                         .HasForeignKey("CatalogVersion", "CourseCode")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("DegreePilot.Api.Persistence.StudentProfile", null)
+                        .WithMany()
+                        .HasForeignKey("StudentId", "CatalogVersion")
+                        .HasPrincipalKey("UserId", "CatalogVersion")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("DegreePilot.Api.Persistence.MutationAudit", b =>
+                {
+                    b.HasOne("DegreePilot.Api.Persistence.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("ActorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("DegreePilot.Api.Persistence.PolicyDocument", b =>
+                {
+                    b.HasOne("DegreePilot.Api.Persistence.CatalogEdition", null)
+                        .WithMany()
+                        .HasForeignKey("CatalogVersion")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("DegreePilot.Api.Persistence.PolicyDocument", null)
+                        .WithMany()
+                        .HasForeignKey("ReplacesDocumentId")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("DegreePilot.Api.Persistence.PolicySection", b =>
+                {
+                    b.HasOne("DegreePilot.Api.Persistence.PolicyDocument", null)
+                        .WithMany()
+                        .HasForeignKey("DocumentId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("DegreePilot.Api.Persistence.SchedulePlan", b =>
+                {
+                    b.HasOne("DegreePilot.Api.Persistence.AcademicTerm", null)
+                        .WithMany()
+                        .HasForeignKey("TermCode")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 

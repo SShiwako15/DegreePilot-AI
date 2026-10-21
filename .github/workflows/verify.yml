@@ -1,0 +1,64 @@
+name: Verify academic demo
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# No repository secrets, deployment jobs, model credentials or charged requests.
+env:
+  AI_ADVISOR_ENABLED: 'false'
+  OPENAI_API_KEY: ''
+  Security__LoginRequestsPerMinute: '120'
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
+        with:
+          dotnet-version: '10.0.200'
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22.20.0'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Restore pinned dependencies
+        run: |
+          dotnet restore DegreePilot.slnx
+          dotnet tool restore
+          npm --prefix apps/web ci
+          python -m venv services/ai/.venv
+          services/ai/.venv/bin/python -m pip install -r services/ai/requirements.txt
+      - name: Builds, domain and HTTP tests, UI tests, Python mocks, formatting, privacy scan
+        shell: pwsh
+        run: ./scripts/verify.ps1
+      - name: Start private local demo stack (AI disabled)
+        run: docker compose up --build --detach --wait --wait-timeout 180
+      - name: Real PostgreSQL migration and restart tests
+        shell: pwsh
+        run: ./scripts/test-postgres.ps1
+      - name: Install browser
+        working-directory: apps/web
+        run: npx playwright install --with-deps chromium
+      - name: Desktop and mobile end-to-end and accessibility smoke
+        working-directory: apps/web
+        run: npm run test:e2e
+      - name: Container health (no configuration or request logs)
+        if: always()
+        run: docker compose ps
+      - name: Stop disposable CI containers
+        if: always()
+        run: docker compose down

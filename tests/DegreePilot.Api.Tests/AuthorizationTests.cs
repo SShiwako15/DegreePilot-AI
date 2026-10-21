@@ -67,7 +67,8 @@ public class AuthorizationTests
         using var client = factory.CreateClient();
         (await Login(client, account)).EnsureSuccessStatusCode();
         Assert.Equal(HttpStatusCode.Forbidden, (await client.GetAsync("/api/students/me/degree-audit")).StatusCode);
-        Assert.Equal(HttpStatusCode.Forbidden, (await client.GetAsync("/api/students/student-ava/transcript")).StatusCode);
+        Assert.Equal(account == "advisor-morgan" ? HttpStatusCode.OK : HttpStatusCode.Forbidden,
+            (await client.GetAsync("/api/students/student-ava/transcript")).StatusCode);
     }
 
     [Fact]

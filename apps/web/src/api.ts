@@ -43,18 +43,19 @@ export class ApiError extends Error {
 export async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   const response = await fetch(path, { credentials: 'same-origin', ...options })
   if (!response.ok) {
-    const problem = await response.json().catch(() => ({})) as { title?: string }
-    throw new ApiError(response.status, problem.title ?? (response.status === 401 ? 'Your session has expired. Please sign in again.' : 'We could not load your records. Please try again.'))
+    const problem = await response.json().catch(() => ({})) as { title?: string; issues?: { code: string; message: string }[] }
+    const details = problem.issues?.map(issue => `${issue.code}: ${issue.message}`).join(' ')
+    throw new ApiError(response.status, details || problem.title || (response.status === 401 ? 'Your session has expired. Please sign in again.' : 'We could not load your records. Please try again.'))
   }
   if (response.status === 204) return undefined as T
   return response.json() as Promise<T>
 }
 
-export async function mutate(path: string, body?: unknown) {
+export async function mutate<T = void>(path: string, body?: unknown, signal?: AbortSignal) {
   // Fetch after each identity change: ASP.NET binds antiforgery tokens to the actor.
-  const { token } = await request<{ token: string }>('/api/auth/csrf')
-  return request<void>(path, {
-    method: 'POST', headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': token },
+  const { token } = await request<{ token: string }>('/api/auth/csrf', { signal })
+  return request<T>(path, {
+    method: 'POST', signal, headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': token },
     body: body === undefined ? undefined : JSON.stringify(body),
   })
 }

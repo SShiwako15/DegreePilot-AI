@@ -12,6 +12,7 @@ public sealed record UserFixture
     public string? CatalogVersion { get; init; }
     public string? ProgramId { get; init; }
     public Attempt[] Transcript { get; init; } = [];
+    public string[] AssignedStudentIds { get; init; } = [];
 }
 
 public static class FixtureReader

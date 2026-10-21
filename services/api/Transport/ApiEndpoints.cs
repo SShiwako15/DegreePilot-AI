@@ -24,6 +24,12 @@ public static class ApiEndpoints
             {
                 // Query an application table, so an unmigrated database is not ready.
                 await db.Catalogs.AsNoTracking().Select(x => x.Id).Take(1).ToArrayAsync();
+                await db.Terms.AsNoTracking().Select(x => x.Code).Take(1).ToArrayAsync();
+                await db.Plans.AsNoTracking().Select(x => x.Id).Take(1).ToArrayAsync();
+                await db.PolicyDocuments.AsNoTracking().Select(x => x.Id).Take(1).ToArrayAsync();
+                await db.PolicySections.AsNoTracking().Select(x => x.Id).Take(1).ToArrayAsync();
+                await db.AdvisorAssignments.AsNoTracking().Take(1).ToArrayAsync();
+                await db.MutationAudits.AsNoTracking().Take(1).ToArrayAsync();
                 return Results.Ok(new { status = "ready" });
             }
             catch (Exception) { return Results.Json(new { status = "unavailable" }, statusCode: 503); }
@@ -45,13 +51,13 @@ public static class ApiEndpoints
                 new ClaimsPrincipal(new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme)),
                 new AuthenticationProperties { IsPersistent = false });
             return Results.NoContent();
-        });
+        }).RequireRateLimiting("LoginBudget");
         app.MapPost("/api/auth/logout", async (HttpContext context) =>
         {
             await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return Results.NoContent();
         }).RequireAuthorization();
-        app.MapGet("/api/me", async (HttpContext context, AcademicDbContext db) =>
+        app.MapGet("/api/me", async (HttpContext context, AcademicDbContext db, IAdvisorClient advisor, CancellationToken ct) =>
         {
             var id = Actor(context);
             var user = await db.Users.AsNoTracking().SingleAsync(x => x.Id == id);
@@ -62,14 +68,15 @@ public static class ApiEndpoints
                 user.DisplayName,
                 user.Role,
                 student?.CatalogVersion,
-                ai = new { available = false, reason = "AI advising is unavailable in this phase. Your deterministic degree audit remains available." }
+                ai = user.Role == "student" ? await advisor.StatusAsync(ct)
+                    : new DegreePilot.Api.Domain.AdvisorStatus(false, "AI advising is restricted to the student's own workspace.")
             });
         }).RequireAuthorization();
         app.MapGet("/api/catalog/versions", async (AcademicDbContext db) =>
-            Results.Ok(await db.Catalogs.AsNoTracking().Select(x => new { catalogVersion = x.Id, x.ProgramId }).ToArrayAsync())).RequireAuthorization();
+            Results.Ok(await db.Catalogs.AsNoTracking().Where(x => x.Status == "published").Select(x => new { catalogVersion = x.Id, x.ProgramId }).ToArrayAsync())).RequireAuthorization();
         app.MapGet("/api/catalog/{version}/courses", async (string version, AcademicDbContext db) =>
         {
-            if (!await db.Catalogs.AnyAsync(x => x.Id == version)) return Results.NotFound();
+            if (!await db.Catalogs.AnyAsync(x => x.Id == version && x.Status == "published")) return Results.NotFound();
             var courses = await db.Courses.AsNoTracking().Where(x => x.CatalogVersion == version).OrderBy(x => x.Code).ToArrayAsync();
             return Results.Ok(courses.Select(FixtureReader.ToDomain));
         }).RequireAuthorization();
@@ -83,17 +90,17 @@ public static class ApiEndpoints
             var data = await query.AuditAsync(Actor(context));
             return data is null ? Results.NotFound() : Results.Ok(data);
         }).RequireAuthorization("Student");
-        app.MapGet("/api/students/{studentId}/transcript", async (string studentId, HttpContext context, AcademicQueries query) =>
+        app.MapGet("/api/students/{studentId}/transcript", async (string studentId, HttpContext context, WorkspaceAccess access, AcademicQueries query, CancellationToken ct) =>
         {
-            if (studentId != Actor(context)) return Results.NotFound();
+            if (!await access.CanReadAsync(context.User, studentId, ct)) return Results.NotFound();
             var data = await query.TranscriptAsync(studentId);
             return data is null ? Results.NotFound() : Results.Ok(data);
-        }).RequireAuthorization("Student");
-        app.MapGet("/api/students/{studentId}/degree-audit", async (string studentId, HttpContext context, AcademicQueries query) =>
+        }).RequireAuthorization("AcademicReader");
+        app.MapGet("/api/students/{studentId}/degree-audit", async (string studentId, HttpContext context, WorkspaceAccess access, AcademicQueries query, CancellationToken ct) =>
         {
-            if (studentId != Actor(context)) return Results.NotFound();
+            if (!await access.CanReadAsync(context.User, studentId, ct)) return Results.NotFound();
             var data = await query.AuditAsync(studentId);
             return data is null ? Results.NotFound() : Results.Ok(data);
-        }).RequireAuthorization("Student");
+        }).RequireAuthorization("AcademicReader");
     }
 }

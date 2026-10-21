@@ -43,6 +43,10 @@ test('anonymous and expired sessions show an accessible login', async () => {
   render(<App />)
   expect(await screen.findByLabelText('Demo account')).toBeVisible()
   expect(screen.getByLabelText('Demo password')).toHaveAttribute('type', 'password')
+  await userEvent.click(screen.getByRole('button', { name: 'Show password' }))
+  expect(screen.getByLabelText('Demo password')).toHaveAttribute('type', 'text')
+  await userEvent.click(screen.getByRole('button', { name: 'Hide password' }))
+  expect(screen.getByLabelText('Demo password')).toHaveAttribute('type', 'password')
   expect(screen.getByText(/All people, courses and policies/)).toBeVisible()
   expect(screen.queryByText('35')).not.toBeInTheDocument()
 })
@@ -55,11 +59,12 @@ test('network failure shows retry without fabricated dashboard', async () => {
 })
 
 test('advisor account is not sent to student endpoints', async () => {
-  const fetchMock = vi.fn(async () => new Response(JSON.stringify({ ...actor, role: 'advisor' }), { status: 200 }))
+  const fetchMock = vi.fn(async (path: string) => new Response(JSON.stringify(path === '/api/me' ? { ...actor, role: 'advisor' } : []), { status: 200 }))
   vi.stubGlobal('fetch', fetchMock)
   render(<App />)
-  expect(await screen.findByRole('heading', { name: 'Student workspace' })).toBeVisible()
-  expect(fetchMock).toHaveBeenCalledTimes(1)
+  expect(await screen.findByRole('heading', { name: 'Assigned students', level: 1 })).toBeVisible()
+  expect(screen.queryByRole('link', { name: 'My transcript' })).not.toBeInTheDocument()
+  expect(fetchMock.mock.calls.every(([path]) => path === '/api/me' || path.startsWith('/api/advisor-workspace/'))).toBe(true)
 })
 
 test('empty transcript is explicit', async () => {

@@ -66,6 +66,13 @@ public static class DemoSeeder
             }
         }
         await db.SaveChangesAsync();
+        foreach (var advisor in users.Where(u => u.Role == "advisor"))
+            foreach (var studentId in advisor.AssignedStudentIds)
+                if (!await db.AdvisorAssignments.AnyAsync(a => a.AdvisorId == advisor.Id && a.StudentId == studentId))
+                    db.AdvisorAssignments.Add(new() { AdvisorId = advisor.Id, StudentId = studentId, Active = true });
+        await db.SaveChangesAsync();
+        await PlanningFixtures.SeedAsync(db, program, courses);
+        await new PolicySources().SeedAsync(db);
         await transaction.CommitAsync();
     }
 }

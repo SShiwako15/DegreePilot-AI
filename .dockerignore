@@ -10,3 +10,7 @@
 **/playwright-report
 .local
 docs/screenshots
+**/.venv
+**/__pycache__
+**/.pytest_cache
+**/.ruff_cache

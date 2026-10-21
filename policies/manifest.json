@@ -1,0 +1,16 @@
+[
+  {
+    "file": "demo_catalog.md",
+    "catalogVersion": "NSU-BSCS-2026",
+    "version": 1,
+    "status": "approved",
+    "sha256": "21480DF03CFD7BEAD1187C81EFAB7678A261513A35EAEA872B49DB263154DDF0"
+  },
+  {
+    "file": "demo_planning_policy.md",
+    "catalogVersion": "NSU-BSCS-2026",
+    "version": 1,
+    "status": "approved",
+    "sha256": "4570412FA7CCEF1CAA149AAF1FD787E76668DBF7D9F16DA54480E169ADF7B553"
+  }
+]
