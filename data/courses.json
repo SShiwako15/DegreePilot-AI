@@ -1,0 +1,490 @@
+[
+  {
+    "code": "CS101",
+    "title": "Introduction to Programming",
+    "credits": 4,
+    "category": "core",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "CS102",
+    "title": "Object-Oriented Programming",
+    "credits": 4,
+    "category": "core",
+    "prerequisite_groups": [
+      [
+        "CS101"
+      ]
+    ],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "CS201",
+    "title": "Data Structures",
+    "credits": 4,
+    "category": "core",
+    "prerequisite_groups": [
+      [
+        "CS102"
+      ]
+    ],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "CS210",
+    "title": "Computer Organization",
+    "credits": 3,
+    "category": "core",
+    "prerequisite_groups": [
+      [
+        "CS102"
+      ]
+    ],
+    "offered_terms": [
+      "Fall"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "CS220",
+    "title": "Software Engineering Fundamentals",
+    "credits": 3,
+    "category": "core",
+    "prerequisite_groups": [
+      [
+        "CS201"
+      ]
+    ],
+    "offered_terms": [
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "CS301",
+    "title": "Design and Analysis of Algorithms",
+    "credits": 3,
+    "category": "core",
+    "prerequisite_groups": [
+      [
+        "CS201"
+      ],
+      [
+        "MATH250",
+        "STAT201"
+      ]
+    ],
+    "offered_terms": [
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "CS310",
+    "title": "Operating Systems",
+    "credits": 3,
+    "category": "core",
+    "prerequisite_groups": [
+      [
+        "CS201"
+      ]
+    ],
+    "offered_terms": [
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "CS330",
+    "title": "Database Systems",
+    "credits": 3,
+    "category": "core",
+    "prerequisite_groups": [
+      [
+        "CS201"
+      ]
+    ],
+    "offered_terms": [
+      "Fall"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "CS401",
+    "title": "Senior Capstone",
+    "credits": 3,
+    "category": "core",
+    "prerequisite_groups": [
+      [
+        "CS301"
+      ],
+      [
+        "CS310"
+      ]
+    ],
+    "offered_terms": [
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "MATH151",
+    "title": "Calculus I",
+    "credits": 4,
+    "category": "core",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "MATH152",
+    "title": "Calculus II",
+    "credits": 4,
+    "category": "core",
+    "prerequisite_groups": [
+      [
+        "MATH151"
+      ]
+    ],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "MATH250",
+    "title": "Discrete Mathematics",
+    "credits": 3,
+    "category": "core",
+    "prerequisite_groups": [
+      [
+        "MATH151"
+      ]
+    ],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "STAT201",
+    "title": "Applied Statistics",
+    "credits": 3,
+    "category": "core",
+    "prerequisite_groups": [
+      [
+        "MATH151"
+      ]
+    ],
+    "offered_terms": [
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "CS350",
+    "title": "Computer Networks",
+    "credits": 3,
+    "category": "cs_elective",
+    "prerequisite_groups": [
+      [
+        "CS201"
+      ]
+    ],
+    "offered_terms": [
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "CS360",
+    "title": "Computer Security",
+    "credits": 3,
+    "category": "cs_elective",
+    "prerequisite_groups": [
+      [
+        "CS220"
+      ]
+    ],
+    "offered_terms": [
+      "Fall"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "CS370",
+    "title": "Artificial Intelligence",
+    "credits": 3,
+    "category": "cs_elective",
+    "prerequisite_groups": [
+      [
+        "CS301"
+      ]
+    ],
+    "offered_terms": [
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "CS380",
+    "title": "Distributed Systems",
+    "credits": 3,
+    "category": "cs_elective",
+    "prerequisite_groups": [
+      [
+        "CS310"
+      ]
+    ],
+    "offered_terms": [
+      "Fall"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "GEN101",
+    "title": "General Education: Academic Writing",
+    "credits": 3,
+    "category": "gen_ed",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "GEN102",
+    "title": "General Education: Public Speaking",
+    "credits": 3,
+    "category": "gen_ed",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "GEN103",
+    "title": "General Education: Ethics",
+    "credits": 3,
+    "category": "gen_ed",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "GEN104",
+    "title": "General Education: World History",
+    "credits": 3,
+    "category": "gen_ed",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "GEN105",
+    "title": "General Education: Economics",
+    "credits": 3,
+    "category": "gen_ed",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "GEN106",
+    "title": "General Education: Literature",
+    "credits": 3,
+    "category": "gen_ed",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "GEN107",
+    "title": "General Education: Civic Engagement",
+    "credits": 3,
+    "category": "gen_ed",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "GEN108",
+    "title": "General Education: Visual Arts",
+    "credits": 3,
+    "category": "gen_ed",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "GEN109",
+    "title": "General Education: Environmental Science",
+    "credits": 3,
+    "category": "gen_ed",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "GEN110",
+    "title": "General Education: Psychology",
+    "credits": 3,
+    "category": "gen_ed",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "GEN111",
+    "title": "General Education: Sociology",
+    "credits": 3,
+    "category": "gen_ed",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "GEN112",
+    "title": "General Education: Global Cultures",
+    "credits": 3,
+    "category": "gen_ed",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "ELEC001",
+    "title": "Free Elective: Research Seminar",
+    "credits": 4,
+    "category": "free_elective",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "ELEC002",
+    "title": "Free Elective: Language Studies",
+    "credits": 4,
+    "category": "free_elective",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "ELEC003",
+    "title": "Free Elective: Digital Media",
+    "credits": 4,
+    "category": "free_elective",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "ELEC004",
+    "title": "Free Elective: Entrepreneurship",
+    "credits": 4,
+    "category": "free_elective",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "ELEC005",
+    "title": "Free Elective: Music Technology",
+    "credits": 4,
+    "category": "free_elective",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "ELEC006",
+    "title": "Free Elective: Applied Design",
+    "credits": 4,
+    "category": "free_elective",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  },
+  {
+    "code": "ELEC007",
+    "title": "Free Elective: Independent Inquiry",
+    "credits": 4,
+    "category": "free_elective",
+    "prerequisite_groups": [],
+    "offered_terms": [
+      "Fall",
+      "Spring"
+    ],
+    "catalog_version": "NSU-BSCS-2026"
+  }
+]

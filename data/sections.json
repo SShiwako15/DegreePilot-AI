@@ -1,0 +1,303 @@
+[
+  {
+    "id": "2027-SPRING-CS220-1",
+    "term_code": "2027-SPRING",
+    "course_code": "CS220",
+    "section_code": "CS220-01",
+    "days": [
+      "Tue",
+      "Thu"
+    ],
+    "start_local": "09:00",
+    "end_local": "10:15",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-SPRING-CS301-1",
+    "term_code": "2027-SPRING",
+    "course_code": "CS301",
+    "section_code": "CS301-01",
+    "days": [
+      "Tue",
+      "Thu"
+    ],
+    "start_local": "09:00",
+    "end_local": "10:15",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-SPRING-CS301-2",
+    "term_code": "2027-SPRING",
+    "course_code": "CS301",
+    "section_code": "CS301-02",
+    "days": [
+      "Tue",
+      "Thu"
+    ],
+    "start_local": "13:00",
+    "end_local": "14:15",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-SPRING-CS310-1",
+    "term_code": "2027-SPRING",
+    "course_code": "CS310",
+    "section_code": "CS310-01",
+    "days": [
+      "Mon",
+      "Wed"
+    ],
+    "start_local": "09:00",
+    "end_local": "10:15",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-SPRING-CS350-1",
+    "term_code": "2027-SPRING",
+    "course_code": "CS350",
+    "section_code": "CS350-01",
+    "days": [
+      "Mon",
+      "Wed"
+    ],
+    "start_local": "10:15",
+    "end_local": "11:30",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-SPRING-STAT201-1",
+    "term_code": "2027-SPRING",
+    "course_code": "STAT201",
+    "section_code": "STAT201-01",
+    "days": [
+      "Tue",
+      "Thu"
+    ],
+    "start_local": "11:00",
+    "end_local": "12:15",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-SPRING-CS401-1",
+    "term_code": "2027-SPRING",
+    "course_code": "CS401",
+    "section_code": "CS401-01",
+    "days": [
+      "Mon",
+      "Wed"
+    ],
+    "start_local": "14:30",
+    "end_local": "15:45",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-SPRING-GEN105-1",
+    "term_code": "2027-SPRING",
+    "course_code": "GEN105",
+    "section_code": "GEN105-01",
+    "days": [
+      "Mon",
+      "Wed"
+    ],
+    "start_local": "12:00",
+    "end_local": "13:15",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-SPRING-GEN106-1",
+    "term_code": "2027-SPRING",
+    "course_code": "GEN106",
+    "section_code": "GEN106-01",
+    "days": [
+      "Tue",
+      "Thu"
+    ],
+    "start_local": "14:30",
+    "end_local": "15:45",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-SPRING-GEN107-1",
+    "term_code": "2027-SPRING",
+    "course_code": "GEN107",
+    "section_code": "GEN107-01",
+    "days": [
+      "Fri"
+    ],
+    "start_local": "10:00",
+    "end_local": "11:15",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-SPRING-ELEC001-1",
+    "term_code": "2027-SPRING",
+    "course_code": "ELEC001",
+    "section_code": "ELEC001-01",
+    "days": [
+      "Fri"
+    ],
+    "start_local": "09:00",
+    "end_local": "12:00",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-SPRING-ELEC002-1",
+    "term_code": "2027-SPRING",
+    "course_code": "ELEC002",
+    "section_code": "ELEC002-01",
+    "days": [
+      "Tue",
+      "Thu"
+    ],
+    "start_local": "15:00",
+    "end_local": "16:30",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-FALL-CS210-1",
+    "term_code": "2027-FALL",
+    "course_code": "CS210",
+    "section_code": "CS210-01",
+    "days": [
+      "Mon",
+      "Wed"
+    ],
+    "start_local": "09:00",
+    "end_local": "10:15",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-FALL-CS330-1",
+    "term_code": "2027-FALL",
+    "course_code": "CS330",
+    "section_code": "CS330-01",
+    "days": [
+      "Tue",
+      "Thu"
+    ],
+    "start_local": "09:00",
+    "end_local": "10:15",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-FALL-CS360-1",
+    "term_code": "2027-FALL",
+    "course_code": "CS360",
+    "section_code": "CS360-01",
+    "days": [
+      "Tue",
+      "Thu"
+    ],
+    "start_local": "13:00",
+    "end_local": "14:15",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-FALL-CS380-1",
+    "term_code": "2027-FALL",
+    "course_code": "CS380",
+    "section_code": "CS380-01",
+    "days": [
+      "Mon",
+      "Wed"
+    ],
+    "start_local": "10:15",
+    "end_local": "11:30",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-FALL-GEN108-1",
+    "term_code": "2027-FALL",
+    "course_code": "GEN108",
+    "section_code": "GEN108-01",
+    "days": [
+      "Mon",
+      "Wed"
+    ],
+    "start_local": "12:00",
+    "end_local": "13:15",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-FALL-GEN109-1",
+    "term_code": "2027-FALL",
+    "course_code": "GEN109",
+    "section_code": "GEN109-01",
+    "days": [
+      "Tue",
+      "Thu"
+    ],
+    "start_local": "11:00",
+    "end_local": "12:15",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  },
+  {
+    "id": "2027-FALL-ELEC003-1",
+    "term_code": "2027-FALL",
+    "course_code": "ELEC003",
+    "section_code": "ELEC003-01",
+    "days": [
+      "Fri"
+    ],
+    "start_local": "09:00",
+    "end_local": "12:00",
+    "timezone": "America/New_York",
+    "capacity": 30,
+    "available_seats": 20,
+    "delivery": "in_person"
+  }
+]

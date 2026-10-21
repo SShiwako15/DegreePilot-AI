@@ -1,0 +1,36 @@
+{
+  "institution": "Northstar University (fictional)",
+  "catalog_version": "NSU-BSCS-2026",
+  "program_id": "BSCS",
+  "program_name": "B.S. Computer Science (demo)",
+  "effective_year": 2026,
+  "min_total_credits": 120,
+  "core_course_codes": [
+    "CS101",
+    "CS102",
+    "CS201",
+    "CS210",
+    "CS220",
+    "CS301",
+    "CS310",
+    "CS330",
+    "CS401",
+    "MATH151",
+    "MATH152",
+    "MATH250",
+    "STAT201"
+  ],
+  "min_cs_elective_credits": 12,
+  "min_gen_ed_credits": 36,
+  "min_free_elective_credits": 28,
+  "min_passing_grade": "C",
+  "grade_point_scale": {
+    "A": 4,
+    "B": 3,
+    "C": 2,
+    "D": 1,
+    "F": 0
+  },
+  "grade_policy_document": "CAT-CORE-GRADES",
+  "notes": "Fictional, not a real school catalog; disjoint categories and all minimums required."
+}

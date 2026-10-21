@@ -1,0 +1,39 @@
+# Local secrets/config
+.env
+.env.*
+!.env.example
+**/appsettings.Development.local.json
+**/secrets.json
+
+# JavaScript
+node_modules/
+dist/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# .NET
+**/bin/
+**/obj/
+**/TestResults/
+
+# Python
+__pycache__/
+.pytest_cache/
+.venv/
+*.py[cod]
+
+# Tooling/editor
+.DS_Store
+.vscode/*.log
+.idea/
+playwright-report/
+test-results/
+
+# Local runtime data
+*.db
+*.sqlite
+*.sqlite3
+logs/
+*.log
+.local/

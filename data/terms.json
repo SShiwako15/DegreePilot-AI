@@ -1,0 +1,20 @@
+[
+  {
+    "code": "2027-SPRING",
+    "name": "Spring 2027",
+    "kind": "Spring",
+    "starts_on": "2027-01-18",
+    "ends_on": "2027-05-14",
+    "timezone": "America/New_York",
+    "is_published": true
+  },
+  {
+    "code": "2027-FALL",
+    "name": "Fall 2027",
+    "kind": "Fall",
+    "starts_on": "2027-08-30",
+    "ends_on": "2027-12-17",
+    "timezone": "America/New_York",
+    "is_published": true
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "student-ava",
+    "display_name": "Ava Chen (fictional)",
+    "email": "ava@demo.northstar.invalid",
+    "role": "student",
+    "catalog_version": "NSU-BSCS-2026",
+    "program_id": "BSCS",
+    "transcript": [
+      {
+        "course_code": "CS101",
+        "term": "2025-FALL",
+        "grade": "A"
+      },
+      {
+        "course_code": "MATH151",
+        "term": "2025-FALL",
+        "grade": "B"
+      },
+      {
+        "course_code": "GEN101",
+        "term": "2025-FALL",
+        "grade": "A"
+      },
+      {
+        "course_code": "GEN102",
+        "term": "2025-FALL",
+        "grade": "B"
+      },
+      {
+        "course_code": "CS102",
+        "term": "2026-SPRING",
+        "grade": "B"
+      },
+      {
+        "course_code": "MATH152",
+        "term": "2026-SPRING",
+        "grade": "C"
+      },
+      {
+        "course_code": "GEN103",
+        "term": "2026-SPRING",
+        "grade": "A"
+      },
+      {
+        "course_code": "GEN104",
+        "term": "2026-SPRING",
+        "grade": "B"
+      },
+      {
+        "course_code": "CS201",
+        "term": "2026-FALL",
+        "grade": "A"
+      },
+      {
+        "course_code": "MATH250",
+        "term": "2026-FALL",
+        "grade": "A"
+      }
+    ]
+  },
+  {
+    "id": "student-noah",
+    "display_name": "Noah Rivera (fictional)",
+    "email": "noah@demo.northstar.invalid",
+    "role": "student",
+    "catalog_version": "NSU-BSCS-2026",
+    "program_id": "BSCS",
+    "transcript": [
+      {
+        "course_code": "CS101",
+        "term": "2026-SPRING",
+        "grade": "A"
+      },
+      {
+        "course_code": "CS102",
+        "term": "2026-FALL",
+        "grade": "D"
+      },
+      {
+        "course_code": "GEN101",
+        "term": "2026-FALL",
+        "grade": "B"
+      }
+    ]
+  },
+  {
+    "id": "advisor-morgan",
+    "display_name": "Morgan Lee (fictional)",
+    "email": "morgan@demo.northstar.invalid",
+    "role": "advisor",
+    "assigned_student_ids": [
+      "student-ava"
+    ]
+  },
+  {
+    "id": "admin-robin",
+    "display_name": "Robin Patel (fictional)",
+    "email": "robin@demo.northstar.invalid",
+    "role": "admin"
+  }
+]
