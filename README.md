@@ -8,7 +8,8 @@ The interface is themed around **Blue Mountain State University**, the fictional
 
 ## Demo
 A complete 5-minute walkthrough of the application.
-[▶ Watch the Demo Video](https://www.youtube.com/watch?v=7QWS3bD_vqo))
+[![Watch the Project Demo](https://img.youtube.com/vi/7QWS3bD_vqo/maxresdefault.jpg)](https://www.youtube.com/watch?v=7QWS3bD_vqo)
+
 Dashboard captures: [desktop](docs/screenshots/dashboard-desktop.png) and [mobile](docs/screenshots/dashboard-mobile.png).
 
 ## Run locally
