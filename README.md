@@ -1,3 +1,5 @@
+
+
 # DegreePilot AI
 
 An academic advising application with deterministic degree audits, course eligibility checks, semester scheduling, a multi-semester research planner, and an evidence-grounded AI advisor.
@@ -5,6 +7,9 @@ An academic advising application with deterministic degree audits, course eligib
 The interface is themed around **Blue Mountain State University**, the fictional university from the television series. All people, transcripts, courses, and policies are fabricated. This is an unofficial demonstration, not official academic advice.
 
 ## Demo
+A complete 5-minute walkthrough of the application.
+[▶ Watch the Demo Video](https://www.youtube.com/watch?v=7QWS3bD_vqo))
+Dashboard captures: [desktop](docs/screenshots/dashboard-desktop.png) and [mobile](docs/screenshots/dashboard-mobile.png).
 
 ## Run locally
 
@@ -66,5 +71,3 @@ The multi-semester research planner schedules a conditional roadmap across up to
 4. Generate a multi-semester roadmap and inspect tentative future offerings and remaining requirements.
 5. Open AI advisor. Ask about prerequisites or degree progress and inspect the cited passages.
 6. Sign in as Noah: 7 credits earned and CS102 still required. His session cannot access Ava's records.
-
-Dashboard captures: [desktop](docs/screenshots/dashboard-desktop.png) and [mobile](docs/screenshots/dashboard-mobile.png).
