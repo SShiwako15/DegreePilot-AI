@@ -24,6 +24,13 @@ builder.Services.AddSingleton(TimeProvider.System);
 builder.Services.AddSingleton<AuditEngine>();
 builder.Services.AddSingleton<EligibilityEngine>();
 builder.Services.AddSingleton<PlanValidator>();
+builder.Services.AddSingleton<DegreePlanValidator>();
+builder.Services.AddScoped<DegreePlanningService>();
+builder.Services.AddHttpClient<IDegreePlannerClient, DegreePlannerClient>((services, http) =>
+{
+    http.BaseAddress = new Uri(services.GetRequiredService<IConfiguration>()["Planner:BaseUrl"] ?? "http://127.0.0.1:8000/");
+    http.Timeout = TimeSpan.FromSeconds(12);
+});
 builder.Services.AddScoped<PlanningService>();
 builder.Services.AddSingleton<PolicySources>();
 builder.Services.AddScoped<PolicyRetrieval>();

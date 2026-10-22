@@ -21,7 +21,7 @@ export function ProgressSummary({ audit }: { audit: Audit }) {
     <section className="relative flex min-w-0 flex-col items-start justify-between gap-4 overflow-hidden rounded-2xl bg-bms-blue p-6 text-white shadow-sm sm:flex-row sm:items-center sm:p-8">
       <div aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-bms-orange" />
       <div className="min-w-0 flex-1">
-        <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-[10px] font-medium"><span className="size-1.5 shrink-0 rounded-full bg-bms-orange" />{audit.degreeComplete ? 'Demo requirements satisfied' : 'Your degree is in progress'}</span>
+        <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-[10px] font-medium"><span className="size-1.5 shrink-0 rounded-full bg-bms-orange" />{audit.degreeComplete ? 'Degree requirements satisfied' : 'Your degree is in progress'}</span>
         <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">B.S. Computer Science</h2>
         <p className="mt-2 text-xs leading-5 text-blue-100">Every completed course brings you closer.</p>
         <div className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1"><strong className="text-5xl font-semibold tracking-tight sm:text-6xl">{earned}</strong><span className="text-xs text-blue-100">/ {required} credits earned</span></div>
@@ -75,7 +75,7 @@ export function Dashboard({ account, data, navigate }: { account: Account; data:
           <dl className="my-4 divide-y divide-slate-100">
             <div className="flex items-center justify-between gap-3 py-3"><dt className="flex items-center gap-2 text-xs text-bms-muted"><GraduationCap size={17} className="shrink-0 text-bms-blue" />Core courses</dt><dd className="text-xl font-semibold">{completed}<span className="text-xs font-normal text-bms-muted"> / {audit.coreRequirements.length}</span></dd></div>
             <div className="flex items-center justify-between gap-3 py-3"><dt className="flex items-center gap-2 text-xs text-bms-muted"><BookOpen size={17} className="shrink-0 text-bms-blue" />Courses with credit</dt><dd className="text-xl font-semibold">{audit.earnedCourses.length}</dd></div>
-            <div className="flex items-center justify-between gap-3 py-3"><dt className="flex items-center gap-2 text-xs text-bms-muted"><ClipboardList size={17} className="shrink-0 text-bms-blue" />Cumulative demo GPA</dt><dd className="shrink-0 text-xl font-semibold">{audit.gpa?.toFixed(2) ?? '—'}<span className="text-xs font-normal text-bms-muted"> / 4.00</span></dd></div>
+            <div className="flex items-center justify-between gap-3 py-3"><dt className="flex items-center gap-2 text-xs text-bms-muted"><ClipboardList size={17} className="shrink-0 text-bms-blue" />Cumulative GPA</dt><dd className="shrink-0 text-xl font-semibold">{audit.gpa?.toFixed(2) ?? '—'}<span className="text-xs font-normal text-bms-muted"> / 4.00</span></dd></div>
           </dl>
           <p className="text-[11px] leading-5 text-bms-muted">GPA includes all letter-graded attempts, including repeats. Credits count once.</p>
         </section>
@@ -167,7 +167,7 @@ export function TranscriptView({ transcript, audit }: { transcript: Transcript; 
           </table>
         </div>
       )}
-      <p className="text-[11px] leading-6 text-bms-muted">Demo GPA: {audit.gpa?.toFixed(2) ?? 'unavailable'}. All attempts are retained. Transfer equivalency is not supported.</p>
+      <p className="text-[11px] leading-6 text-bms-muted">GPA: {audit.gpa?.toFixed(2) ?? 'unavailable'}. All attempts are retained. Transfer equivalency is not supported.</p>
     </section>
   )
 }

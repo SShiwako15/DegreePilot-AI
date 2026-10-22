@@ -130,9 +130,9 @@ public class AdministrationTests
         var detail = await admin.GetFromJsonAsync<JsonElement>($"/api/admin/policies/{id}");
         var texts = detail.GetProperty("sections").Deserialize<PolicyText[]>(new JsonSerializerOptions(JsonSerializerDefaults.Web))!;
         (await admin.PostAsJsonAsync($"/api/admin/policies/{id}/draft", new PolicyDraftRequest(1, "Reviewed fictional catalog", texts))).EnsureSuccessStatusCode();
-        Assert.Equal(1, (await student.GetFromJsonAsync<PolicyCitation>("/api/policies/sections/CAT-PREREQ-CS401"))!.DocumentVersion);
+        Assert.Equal(source.Version, (await student.GetFromJsonAsync<PolicyCitation>("/api/policies/sections/CAT-PREREQ-CS401"))!.DocumentVersion);
         (await admin.PostAsJsonAsync($"/api/admin/policies/{id}/publish", new RevisionRequest(2))).EnsureSuccessStatusCode();
-        Assert.Equal(2, (await student.GetFromJsonAsync<PolicyCitation>("/api/policies/sections/CAT-PREREQ-CS401"))!.DocumentVersion);
+        Assert.Equal(source.Version + 1, (await student.GetFromJsonAsync<PolicyCitation>("/api/policies/sections/CAT-PREREQ-CS401"))!.DocumentVersion);
         Assert.Equal(HttpStatusCode.Conflict, (await admin.PostAsJsonAsync($"/api/admin/policies/{id}/draft", new PolicyDraftRequest(3, "Changed", texts))).StatusCode);
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AcademicDbContext>();

@@ -2,15 +2,15 @@
   {
     "file": "demo_catalog.md",
     "catalogVersion": "NSU-BSCS-2026",
-    "version": 1,
+    "version": 3,
     "status": "approved",
-    "sha256": "21480DF03CFD7BEAD1187C81EFAB7678A261513A35EAEA872B49DB263154DDF0"
+    "sha256": "C7249A5E852D00D0007C569B740A7C7BD3B6EE9E542595D61BF4A0695F4A71C8"
   },
   {
     "file": "demo_planning_policy.md",
     "catalogVersion": "NSU-BSCS-2026",
-    "version": 1,
+    "version": 3,
     "status": "approved",
-    "sha256": "4570412FA7CCEF1CAA149AAF1FD787E76668DBF7D9F16DA54480E169ADF7B553"
+    "sha256": "F74D0342B4EF39D06A9E88A33723CD2564B8939307E0DE0FC5D9AA1BE185D2B9"
   }
 ]

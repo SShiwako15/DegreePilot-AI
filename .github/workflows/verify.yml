@@ -22,6 +22,8 @@ jobs:
   verify:
     runs-on: ubuntu-24.04
     timeout-minutes: 25
+    env:
+      DEGREE_BENCHMARK_DIR: ${{ runner.temp }}/degree-benchmark
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
@@ -42,6 +44,8 @@ jobs:
           npm --prefix apps/web ci
           python -m venv services/ai/.venv
           services/ai/.venv/bin/python -m pip install -r services/ai/requirements.txt
+      - name: Reproduce synthetic benchmark for independent backend replay
+        run: services/ai/.venv/bin/python scripts/benchmark_degree.py --repetitions 1 --output "$DEGREE_BENCHMARK_DIR"
       - name: Builds, domain and HTTP tests, UI tests, Python mocks, formatting, privacy scan
         shell: pwsh
         run: ./scripts/verify.ps1

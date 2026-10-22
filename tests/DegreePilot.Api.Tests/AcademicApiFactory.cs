@@ -25,8 +25,10 @@ public sealed class AcademicApiFactory : WebApplicationFactory<Program>
     private readonly int plannerLimit;
     private readonly TimeProvider clock;
     private readonly ILoggerProvider? logs;
+    private readonly IDegreePlannerClient? degreePlanner;
     public AcademicApiFactory(string? postgresConnection = null, IPlannerClient? planner = null, IAdvisorClient? advisor = null,
-        int advisorLimit = 1000, int loginLimit = 1000, int plannerLimit = 1000, TimeProvider? clock = null, ILoggerProvider? logs = null)
+        int advisorLimit = 1000, int loginLimit = 1000, int plannerLimit = 1000, TimeProvider? clock = null, ILoggerProvider? logs = null,
+        IDegreePlannerClient? degreePlanner = null)
     {
         this.postgresConnection = postgresConnection;
         this.planner = planner;
@@ -36,6 +38,7 @@ public sealed class AcademicApiFactory : WebApplicationFactory<Program>
         this.plannerLimit = plannerLimit;
         this.clock = clock ?? new DemoTestClock();
         this.logs = logs;
+        this.degreePlanner = degreePlanner;
         if (postgresConnection is null) connection.Open();
     }
     protected override void ConfigureWebHost(IWebHostBuilder builder)
@@ -59,6 +62,11 @@ public sealed class AcademicApiFactory : WebApplicationFactory<Program>
             services.AddDataProtection().UseEphemeralDataProtectionProvider();
             services.RemoveAll<TimeProvider>();
             services.AddSingleton(clock);
+            if (degreePlanner is not null)
+            {
+                services.RemoveAll<IDegreePlannerClient>();
+                services.AddSingleton(degreePlanner);
+            }
             services.RemoveAll<IAdvisorClient>();
             services.AddSingleton(advisor);
             if (planner is not null)

@@ -6,8 +6,8 @@ import type { Page } from '@playwright/test'
 const password = process.env.DEMO_PASSWORD ?? 'Local-Demo-Only!2026'
 
 async function login(page: Page, username: string) {
-  await page.getByLabel('Demo account').selectOption(username)
-  await page.getByLabel('Demo password', { exact: true }).fill(password)
+  await page.getByLabel('Account').selectOption(username)
+  await page.getByLabel('Password', { exact: true }).fill(password)
   await page.getByRole('button', { name: 'Login', exact: true }).click()
 }
 
@@ -24,7 +24,7 @@ test('real login, audit, transcript, catalog, account isolation and logout', asy
   const errors: string[] = []
   page.on('pageerror', error => errors.push(error.message))
   await page.goto('/')
-  await expect(page.getByLabel('Demo account')).toBeVisible()
+  await expect(page.getByLabel('Account')).toBeVisible()
   const logo = page.getByRole('img', { name: 'Blue Mountain State Mountain Goats logo' })
   await expect(logo).toBeVisible()
   await expect(logo).toHaveJSProperty('complete', true)
@@ -79,7 +79,7 @@ test('real login, audit, transcript, catalog, account isolation and logout', asy
 
   await openNavigation(page)
   await page.getByRole('button', { name: 'Sign out' }).click()
-  await expect(page.getByLabel('Demo account')).toBeVisible()
+  await expect(page.getByLabel('Account')).toBeVisible()
   await login(page, 'student-noah')
   await openNavigation(page)
   await page.getByRole('link', { name: 'Overview' }).click()
@@ -91,14 +91,14 @@ test('real login, audit, transcript, catalog, account isolation and logout', asy
   expect((await own.json()).earnedCredits).toBe(7)
   await openNavigation(page)
   await page.getByRole('button', { name: 'Sign out' }).click()
-  await expect(page.getByLabel('Demo account')).toBeVisible()
+  await expect(page.getByLabel('Account')).toBeVisible()
   expect((await page.request.get('/api/me')).status()).toBe(401)
   expect(errors).toEqual([])
 })
 
 test('eligibility, conflict rejection, actual solver, saving and tentative offerings', async ({ page }, testInfo) => {
   await page.goto('/')
-  await expect(page.getByLabel('Demo account')).toBeVisible()
+  await expect(page.getByLabel('Account')).toBeVisible()
   await login(page, 'student-ava')
   await expect(page.getByText('35', { exact: true })).toBeVisible()
   await openNavigation(page)
@@ -141,9 +141,9 @@ test('eligibility, conflict rejection, actual solver, saving and tentative offer
   await noPageOverflow(page)
 })
 
-test('advisor missing-key state preserves the audit, planner and approved policy library', async ({ page }, testInfo) => {
+test('advisor missing-key state preserves the audit and planner without a policy library', async ({ page }, testInfo) => {
   await page.goto('/')
-  await expect(page.getByLabel('Demo account')).toBeVisible()
+  await expect(page.getByLabel('Account')).toBeVisible()
   await login(page, 'student-ava')
   await expect(page.getByText('35', { exact: true })).toBeVisible()
   await openNavigation(page)
@@ -153,9 +153,7 @@ test('advisor missing-key state preserves the audit, planner and approved policy
   await expect(page.getByRole('heading', { name: 'AI advisor', exact: true })).toBeFocused()
   await expect(page.getByText(/AI advising is unavailable: the optional provider/)).toBeVisible()
   await expect(page.getByRole('button', { name: 'Send question', exact: true })).toBeDisabled()
-  const library = page.getByRole('complementary', { name: 'Approved policy library' })
-  await library.getByText('CAT-PREREQ-CS401 · Capstone eligibility', { exact: true }).click()
-  await expect(library.getByRole('blockquote').filter({ hasText: 'CS401 Senior Capstone' })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Policy library', exact: true })).toHaveCount(0)
   const source = await page.request.get('/api/policies/sections/CAT-PREREQ-CS401')
   expect((await source.json()).catalogVersion).toBe('NSU-BSCS-2026')
   await noPageOverflow(page)
@@ -167,4 +165,26 @@ test('advisor missing-key state preserves the audit, planner and approved policy
   await openNavigation(page)
   await page.getByRole('link', { name: 'Semester planner' }).click()
   await expect(page.getByRole('heading', { name: 'Available eligible sections' })).toBeVisible()
+})
+
+test('multi-semester research proposal validates conditional completion and keeps earned credits unchanged', async ({ page }) => {
+  await page.goto('/')
+  await login(page, 'student-ava')
+  await expect(page.getByText('35', { exact: true })).toBeVisible()
+  await openNavigation(page)
+  await page.getByRole('link', { name: 'Semester planner' }).click()
+  const research = page.getByRole('region', { name: 'Multi-semester research planner' })
+  await research.getByRole('button', { name: 'Generate degree roadmap' }).click()
+  const result = page.getByRole('region', { name: 'Degree roadmap result' })
+  await expect(result.getByRole('status')).toHaveText('Validated conditional degree roadmap', { timeout: 20000 })
+  await expect(result.getByText(/Tentative offerings/).first()).toBeVisible()
+  await expect(result.getByText(/conditional on successful future grades/)).toBeVisible()
+  expect((await (await page.request.get('/api/students/me/degree-audit')).json()).earnedCredits).toBe(35)
+  await research.getByLabel('Roadmap horizon (semesters)').fill('1')
+  const button = research.getByRole('button', { name: 'Generate degree roadmap' })
+  await button.focus()
+  await page.keyboard.press('Enter')
+  await expect(result.getByRole('status')).toHaveText('INFEASIBLE', { timeout: 20000 })
+  await expect(result.getByText(/does not prove graduation is impossible/)).toBeVisible()
+  await noPageOverflow(page)
 })

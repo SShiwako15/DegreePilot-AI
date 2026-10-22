@@ -1,0 +1,4556 @@
+[
+  {
+    "case_id": "student-ava-2027-SPRING-10-15",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-CS220-1",
+            "2027-SPRING-CS301-2",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-ELEC003-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:GEN105",
+            "tentative:GEN108",
+            "tentative:GEN109",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:GEN106",
+            "tentative:GEN107",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:ELEC006",
+            "tentative:ELEC007"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:ELEC002",
+            "tentative:ELEC004",
+            "tentative:ELEC005"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 6,
+      "completionLowerBound": 6
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-10-15",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-STAT201-1",
+            "2027-SPRING-CS301-1",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-CS380-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS401",
+            "tentative:ELEC002",
+            "tentative:ELEC004"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC005",
+            "tentative:ELEC006",
+            "tentative:ELEC007",
+            "tentative:CS360"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:GEN108",
+            "tentative:GEN109",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 6,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-10-15",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-CS220-1",
+            "2027-SPRING-CS301-2",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-ELEC003-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:GEN105",
+            "tentative:GEN108",
+            "tentative:GEN109",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:GEN106",
+            "tentative:GEN107",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:ELEC006",
+            "tentative:ELEC007"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:ELEC002",
+            "tentative:ELEC004",
+            "tentative:ELEC005"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 6,
+      "completionLowerBound": 6
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-10-15",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-STAT201-1",
+            "2027-SPRING-CS301-1",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-CS380-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS401",
+            "tentative:ELEC002",
+            "tentative:ELEC004"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC005",
+            "tentative:ELEC006",
+            "tentative:ELEC007",
+            "tentative:CS360"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:GEN108",
+            "tentative:GEN109",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 6,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-10-15",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-CS220-1",
+            "2027-SPRING-CS301-2",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-ELEC003-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:GEN105",
+            "tentative:GEN108",
+            "tentative:GEN109",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:GEN106",
+            "tentative:GEN107",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:ELEC006",
+            "tentative:ELEC007"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:ELEC002",
+            "tentative:ELEC004",
+            "tentative:ELEC005"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 6,
+      "completionLowerBound": 6
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-10-15",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-STAT201-1",
+            "2027-SPRING-CS301-1",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-CS380-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS401",
+            "tentative:ELEC002",
+            "tentative:ELEC004"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC005",
+            "tentative:ELEC006",
+            "tentative:ELEC007",
+            "tentative:CS360"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:GEN108",
+            "tentative:GEN109",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 6,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-8-18",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-CS220-1",
+            "2027-SPRING-CS301-2",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-GEN106-1",
+            "2027-SPRING-GEN107-1",
+            "2027-SPRING-STAT201-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS330-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN108",
+            "tentative:GEN110",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:ELEC001",
+            "tentative:ELEC004",
+            "tentative:ELEC007",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-8-18",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-STAT201-1",
+            "2027-SPRING-CS301-1",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1",
+            "2027-SPRING-ELEC002-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-GEN108-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS401",
+            "tentative:ELEC004",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC007",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:GEN109",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 5,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-8-18",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-CS220-1",
+            "2027-SPRING-CS301-2",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-GEN106-1",
+            "2027-SPRING-GEN107-1",
+            "2027-SPRING-STAT201-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS330-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN108",
+            "tentative:GEN110",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:ELEC001",
+            "tentative:ELEC004",
+            "tentative:ELEC007",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-8-18",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-STAT201-1",
+            "2027-SPRING-CS301-1",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1",
+            "2027-SPRING-ELEC002-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-GEN108-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS401",
+            "tentative:ELEC004",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC007",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:GEN109",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 5,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-8-18",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-CS220-1",
+            "2027-SPRING-CS301-2",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-GEN106-1",
+            "2027-SPRING-GEN107-1",
+            "2027-SPRING-STAT201-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS330-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN108",
+            "tentative:GEN110",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:ELEC001",
+            "tentative:ELEC004",
+            "tentative:ELEC007",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-8-18",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-STAT201-1",
+            "2027-SPRING-CS301-1",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1",
+            "2027-SPRING-ELEC002-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-GEN108-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS401",
+            "tentative:ELEC004",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC007",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:GEN109",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 5,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-6-18",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-CS220-1",
+            "2027-SPRING-CS301-2",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-CS350-1",
+            "2027-SPRING-GEN106-1",
+            "2027-SPRING-STAT201-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:ELEC002",
+            "tentative:ELEC004",
+            "tentative:GEN107",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:CS380",
+            "tentative:ELEC006",
+            "tentative:ELEC007",
+            "tentative:GEN105"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS370",
+            "tentative:ELEC001",
+            "tentative:ELEC005",
+            "tentative:GEN110",
+            "tentative:GEN111"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-6-18",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-STAT201-1",
+            "2027-SPRING-CS301-1",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1",
+            "2027-SPRING-ELEC002-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-GEN108-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS401",
+            "tentative:ELEC004",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC007",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:GEN109",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 5,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-6-18",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-CS220-1",
+            "2027-SPRING-CS301-2",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-CS350-1",
+            "2027-SPRING-GEN106-1",
+            "2027-SPRING-STAT201-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:ELEC002",
+            "tentative:ELEC004",
+            "tentative:GEN107",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:CS380",
+            "tentative:ELEC006",
+            "tentative:ELEC007",
+            "tentative:GEN105"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS370",
+            "tentative:ELEC001",
+            "tentative:ELEC005",
+            "tentative:GEN110",
+            "tentative:GEN111"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-6-18",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-STAT201-1",
+            "2027-SPRING-CS301-1",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1",
+            "2027-SPRING-ELEC002-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-GEN108-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS401",
+            "tentative:ELEC004",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC007",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:GEN109",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 5,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-6-18",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-CS220-1",
+            "2027-SPRING-CS301-2",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-CS350-1",
+            "2027-SPRING-GEN106-1",
+            "2027-SPRING-STAT201-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:ELEC002",
+            "tentative:ELEC004",
+            "tentative:GEN107",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:CS380",
+            "tentative:ELEC006",
+            "tentative:ELEC007",
+            "tentative:GEN105"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS370",
+            "tentative:ELEC001",
+            "tentative:ELEC005",
+            "tentative:GEN110",
+            "tentative:GEN111"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "student-ava-2027-SPRING-6-18",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-STAT201-1",
+            "2027-SPRING-CS301-1",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1",
+            "2027-SPRING-ELEC002-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-GEN108-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS401",
+            "tentative:ELEC004",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC007",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:GEN109",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 5,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-10-15",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:ELEC001"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:ELEC002",
+            "tentative:ELEC006",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN106",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:CS380",
+            "tentative:GEN105",
+            "tentative:GEN107",
+            "tentative:GEN110"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:ELEC004",
+            "tentative:ELEC005",
+            "tentative:ELEC007",
+            "tentative:STAT201"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 6,
+      "completionLowerBound": 6
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-10-15",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:STAT201",
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:CS220",
+            "tentative:CS350"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC001",
+            "tentative:ELEC002",
+            "tentative:ELEC004",
+            "tentative:CS360"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:ELEC005",
+            "tentative:ELEC006",
+            "tentative:ELEC007"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS380",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107",
+            "tentative:GEN109"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:CS370",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 6,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-10-15",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:ELEC001"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:ELEC002",
+            "tentative:ELEC006",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN106",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:CS380",
+            "tentative:GEN105",
+            "tentative:GEN107",
+            "tentative:GEN110"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:ELEC004",
+            "tentative:ELEC005",
+            "tentative:ELEC007",
+            "tentative:STAT201"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 6,
+      "completionLowerBound": 6
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-10-15",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:STAT201",
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:CS220",
+            "tentative:CS350"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC001",
+            "tentative:ELEC002",
+            "tentative:ELEC004",
+            "tentative:CS360"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:ELEC005",
+            "tentative:ELEC006",
+            "tentative:ELEC007"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS380",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107",
+            "tentative:GEN109"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:CS370",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 6,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-10-15",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:ELEC001"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:ELEC002",
+            "tentative:ELEC006",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN106",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:CS380",
+            "tentative:GEN105",
+            "tentative:GEN107",
+            "tentative:GEN110"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:ELEC004",
+            "tentative:ELEC005",
+            "tentative:ELEC007",
+            "tentative:STAT201"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 6,
+      "completionLowerBound": 6
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-10-15",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:STAT201",
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:CS220",
+            "tentative:CS350"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC001",
+            "tentative:ELEC002",
+            "tentative:ELEC004",
+            "tentative:CS360"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:ELEC005",
+            "tentative:ELEC006",
+            "tentative:ELEC007"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS380",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107",
+            "tentative:GEN109"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:CS370",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 6,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-8-18",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:GEN105",
+            "tentative:GEN111",
+            "tentative:GEN112",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:CS380",
+            "tentative:ELEC001",
+            "tentative:ELEC004",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN107",
+            "tentative:GEN110"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:ELEC007",
+            "tentative:GEN106"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-8-18",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-8-18",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:GEN105",
+            "tentative:GEN111",
+            "tentative:GEN112",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:CS380",
+            "tentative:ELEC001",
+            "tentative:ELEC004",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN107",
+            "tentative:GEN110"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:ELEC007",
+            "tentative:GEN106"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-8-18",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-8-18",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:GEN105",
+            "tentative:GEN111",
+            "tentative:GEN112",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:CS380",
+            "tentative:ELEC001",
+            "tentative:ELEC004",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN107",
+            "tentative:GEN110"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:ELEC007",
+            "tentative:GEN106"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-8-18",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-6-18",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:CS350",
+            "tentative:ELEC004",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS380",
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:GEN106",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN107",
+            "tentative:GEN110",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:ELEC001",
+            "tentative:ELEC006",
+            "tentative:ELEC007",
+            "tentative:GEN105"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-6-18",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-6-18",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:CS350",
+            "tentative:ELEC004",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS380",
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:GEN106",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN107",
+            "tentative:GEN110",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:ELEC001",
+            "tentative:ELEC006",
+            "tentative:ELEC007",
+            "tentative:GEN105"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-6-18",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-6-18",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN108-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:CS350",
+            "tentative:ELEC004",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS380",
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:GEN106",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN107",
+            "tentative:GEN110",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:ELEC001",
+            "tentative:ELEC006",
+            "tentative:ELEC007",
+            "tentative:GEN105"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "student-ava-2027-FALL-6-18",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-insufficient-horizon-1",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-insufficient-horizon-1",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-insufficient-horizon-1",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-insufficient-horizon-1",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-insufficient-horizon-1",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-insufficient-horizon-1",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-insufficient-horizon-2",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-insufficient-horizon-2",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-insufficient-horizon-2",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-insufficient-horizon-2",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-insufficient-horizon-2",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-ava-insufficient-horizon-2",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-10-15",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:ELEC001",
+            "tentative:ELEC006",
+            "tentative:GEN103",
+            "tentative:GEN108"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS102",
+            "tentative:GEN111",
+            "tentative:GEN112",
+            "tentative:MATH151"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:GEN102",
+            "tentative:GEN105",
+            "tentative:GEN110",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS201",
+            "tentative:CS210",
+            "tentative:ELEC003",
+            "tentative:ELEC004"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:CS350",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2030-FALL",
+          "selectionIds": [
+            "tentative:CS330",
+            "tentative:CS360",
+            "tentative:CS380",
+            "tentative:GEN104",
+            "tentative:MATH250"
+          ]
+        },
+        {
+          "termCode": "2031-SPRING",
+          "selectionIds": [
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:ELEC007",
+            "tentative:MATH152"
+          ]
+        },
+        {
+          "termCode": "2031-FALL",
+          "selectionIds": [
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:GEN106",
+            "tentative:GEN109"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 10,
+      "completionLowerBound": 10
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-10-15",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-10-15",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:ELEC001",
+            "tentative:ELEC006",
+            "tentative:GEN103",
+            "tentative:GEN108"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS102",
+            "tentative:GEN111",
+            "tentative:GEN112",
+            "tentative:MATH151"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:GEN102",
+            "tentative:GEN105",
+            "tentative:GEN110",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS201",
+            "tentative:CS210",
+            "tentative:ELEC003",
+            "tentative:ELEC004"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:CS350",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2030-FALL",
+          "selectionIds": [
+            "tentative:CS330",
+            "tentative:CS360",
+            "tentative:CS380",
+            "tentative:GEN104",
+            "tentative:MATH250"
+          ]
+        },
+        {
+          "termCode": "2031-SPRING",
+          "selectionIds": [
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:ELEC007",
+            "tentative:MATH152"
+          ]
+        },
+        {
+          "termCode": "2031-FALL",
+          "selectionIds": [
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:GEN106",
+            "tentative:GEN109"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 10,
+      "completionLowerBound": 10
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-10-15",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-10-15",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:ELEC001",
+            "tentative:ELEC006",
+            "tentative:GEN103",
+            "tentative:GEN108"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS102",
+            "tentative:GEN111",
+            "tentative:GEN112",
+            "tentative:MATH151"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:GEN102",
+            "tentative:GEN105",
+            "tentative:GEN110",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS201",
+            "tentative:CS210",
+            "tentative:ELEC003",
+            "tentative:ELEC004"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:CS350",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2030-FALL",
+          "selectionIds": [
+            "tentative:CS330",
+            "tentative:CS360",
+            "tentative:CS380",
+            "tentative:GEN104",
+            "tentative:MATH250"
+          ]
+        },
+        {
+          "termCode": "2031-SPRING",
+          "selectionIds": [
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:ELEC007",
+            "tentative:MATH152"
+          ]
+        },
+        {
+          "termCode": "2031-FALL",
+          "selectionIds": [
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:GEN106",
+            "tentative:GEN109"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 10,
+      "completionLowerBound": 10
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-10-15",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-8-18",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-8-18",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-8-18",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-8-18",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-8-18",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-8-18",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-6-18",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-6-18",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-6-18",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-6-18",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-6-18",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-SPRING-6-18",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-10-15",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS102",
+            "tentative:ELEC003",
+            "tentative:ELEC005",
+            "tentative:GEN104"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS201",
+            "tentative:ELEC001",
+            "tentative:GEN106",
+            "tentative:MATH151"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS310",
+            "tentative:GEN102",
+            "tentative:GEN108",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS330",
+            "tentative:ELEC006",
+            "tentative:GEN103",
+            "tentative:GEN109"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:CS301",
+            "tentative:CS350",
+            "tentative:GEN110",
+            "tentative:MATH250"
+          ]
+        },
+        {
+          "termCode": "2030-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:CS380",
+            "tentative:ELEC004",
+            "tentative:MATH152"
+          ]
+        },
+        {
+          "termCode": "2031-SPRING",
+          "selectionIds": [
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN105",
+            "tentative:GEN107",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2031-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:ELEC002",
+            "tentative:ELEC007",
+            "tentative:GEN111"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 9,
+      "completionLowerBound": 9
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-10-15",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-10-15",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS102",
+            "tentative:ELEC003",
+            "tentative:ELEC005",
+            "tentative:GEN104"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS201",
+            "tentative:ELEC001",
+            "tentative:GEN106",
+            "tentative:MATH151"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS310",
+            "tentative:GEN102",
+            "tentative:GEN108",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS330",
+            "tentative:ELEC006",
+            "tentative:GEN103",
+            "tentative:GEN109"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:CS301",
+            "tentative:CS350",
+            "tentative:GEN110",
+            "tentative:MATH250"
+          ]
+        },
+        {
+          "termCode": "2030-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:CS380",
+            "tentative:ELEC004",
+            "tentative:MATH152"
+          ]
+        },
+        {
+          "termCode": "2031-SPRING",
+          "selectionIds": [
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN105",
+            "tentative:GEN107",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2031-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:ELEC002",
+            "tentative:ELEC007",
+            "tentative:GEN111"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 9,
+      "completionLowerBound": 9
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-10-15",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-10-15",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS102",
+            "tentative:ELEC003",
+            "tentative:ELEC005",
+            "tentative:GEN104"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS201",
+            "tentative:ELEC001",
+            "tentative:GEN106",
+            "tentative:MATH151"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS310",
+            "tentative:GEN102",
+            "tentative:GEN108",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS330",
+            "tentative:ELEC006",
+            "tentative:GEN103",
+            "tentative:GEN109"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:CS301",
+            "tentative:CS350",
+            "tentative:GEN110",
+            "tentative:MATH250"
+          ]
+        },
+        {
+          "termCode": "2030-FALL",
+          "selectionIds": [
+            "tentative:CS360",
+            "tentative:CS380",
+            "tentative:ELEC004",
+            "tentative:MATH152"
+          ]
+        },
+        {
+          "termCode": "2031-SPRING",
+          "selectionIds": [
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN105",
+            "tentative:GEN107",
+            "tentative:GEN112"
+          ]
+        },
+        {
+          "termCode": "2031-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:ELEC002",
+            "tentative:ELEC007",
+            "tentative:GEN111"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 9,
+      "completionLowerBound": 9
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-10-15",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-8-18",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:ELEC002",
+            "tentative:ELEC003",
+            "tentative:GEN102",
+            "tentative:MATH151"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS102",
+            "tentative:ELEC007",
+            "tentative:GEN104",
+            "tentative:GEN105",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:ELEC001",
+            "tentative:ELEC004",
+            "tentative:GEN106",
+            "tentative:GEN109",
+            "tentative:GEN110"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS201",
+            "tentative:CS210",
+            "tentative:ELEC006",
+            "tentative:GEN107",
+            "tentative:MATH250"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:GEN108",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2030-FALL",
+          "selectionIds": [
+            "tentative:CS330",
+            "tentative:CS360",
+            "tentative:CS380",
+            "tentative:ELEC005",
+            "tentative:MATH152"
+          ]
+        },
+        {
+          "termCode": "2031-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN103",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 8,
+      "completionLowerBound": 8
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-8-18",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-8-18",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:ELEC002",
+            "tentative:ELEC003",
+            "tentative:GEN102",
+            "tentative:MATH151"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS102",
+            "tentative:ELEC007",
+            "tentative:GEN104",
+            "tentative:GEN105",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:ELEC001",
+            "tentative:ELEC004",
+            "tentative:GEN106",
+            "tentative:GEN109",
+            "tentative:GEN110"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS201",
+            "tentative:CS210",
+            "tentative:ELEC006",
+            "tentative:GEN107",
+            "tentative:MATH250"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:GEN108",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2030-FALL",
+          "selectionIds": [
+            "tentative:CS330",
+            "tentative:CS360",
+            "tentative:CS380",
+            "tentative:ELEC005",
+            "tentative:MATH152"
+          ]
+        },
+        {
+          "termCode": "2031-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN103",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 8,
+      "completionLowerBound": 8
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-8-18",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-8-18",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:ELEC002",
+            "tentative:ELEC003",
+            "tentative:GEN102",
+            "tentative:MATH151"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS102",
+            "tentative:ELEC007",
+            "tentative:GEN104",
+            "tentative:GEN105",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:ELEC001",
+            "tentative:ELEC004",
+            "tentative:GEN106",
+            "tentative:GEN109",
+            "tentative:GEN110"
+          ]
+        },
+        {
+          "termCode": "2029-FALL",
+          "selectionIds": [
+            "tentative:CS201",
+            "tentative:CS210",
+            "tentative:ELEC006",
+            "tentative:GEN107",
+            "tentative:MATH250"
+          ]
+        },
+        {
+          "termCode": "2030-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS301",
+            "tentative:CS310",
+            "tentative:GEN108",
+            "tentative:STAT201"
+          ]
+        },
+        {
+          "termCode": "2030-FALL",
+          "selectionIds": [
+            "tentative:CS330",
+            "tentative:CS360",
+            "tentative:CS380",
+            "tentative:ELEC005",
+            "tentative:MATH152"
+          ]
+        },
+        {
+          "termCode": "2031-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:CS401",
+            "tentative:GEN103",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 8,
+      "completionLowerBound": 8
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-8-18",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-6-18",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-6-18",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-6-18",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-6-18",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-6-18",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-2027-FALL-6-18",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-insufficient-horizon-1",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-insufficient-horizon-1",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-insufficient-horizon-1",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-insufficient-horizon-1",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-insufficient-horizon-1",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-insufficient-horizon-1",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-insufficient-horizon-2",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-insufficient-horizon-2",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-insufficient-horizon-2",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-insufficient-horizon-2",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-insufficient-horizon-2",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "INFEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "student-noah-insufficient-horizon-2",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "ava-repeat-deduplication",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-CS220-1",
+            "2027-SPRING-CS301-2",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-GEN106-1",
+            "2027-SPRING-GEN107-1",
+            "2027-SPRING-STAT201-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS330-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN108",
+            "tentative:GEN110",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:ELEC001",
+            "tentative:ELEC004",
+            "tentative:ELEC007",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "ava-repeat-deduplication",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-STAT201-1",
+            "2027-SPRING-CS301-1",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1",
+            "2027-SPRING-ELEC002-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-GEN108-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS401",
+            "tentative:ELEC004",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC007",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:GEN109",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 5,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "ava-repeat-deduplication",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-CS220-1",
+            "2027-SPRING-CS301-2",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-GEN106-1",
+            "2027-SPRING-GEN107-1",
+            "2027-SPRING-STAT201-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS330-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN108",
+            "tentative:GEN110",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:ELEC001",
+            "tentative:ELEC004",
+            "tentative:ELEC007",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "ava-repeat-deduplication",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-STAT201-1",
+            "2027-SPRING-CS301-1",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1",
+            "2027-SPRING-ELEC002-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-GEN108-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS401",
+            "tentative:ELEC004",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC007",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:GEN109",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 5,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "ava-repeat-deduplication",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-CS220-1",
+            "2027-SPRING-CS301-2",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-GEN106-1",
+            "2027-SPRING-GEN107-1",
+            "2027-SPRING-STAT201-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS330-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-GEN109-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:ELEC002",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:CS210",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN108",
+            "tentative:GEN110",
+            "tentative:GEN111"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS401",
+            "tentative:ELEC001",
+            "tentative:ELEC004",
+            "tentative:ELEC007",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 5,
+      "completionLowerBound": 5
+    }
+  },
+  {
+    "case_id": "ava-repeat-deduplication",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "2027-SPRING-STAT201-1",
+            "2027-SPRING-CS301-1",
+            "2027-SPRING-CS310-1",
+            "2027-SPRING-ELEC001-1",
+            "2027-SPRING-ELEC002-1"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "2027-FALL-CS210-1",
+            "2027-FALL-CS330-1",
+            "2027-FALL-ELEC003-1",
+            "2027-FALL-CS380-1",
+            "2027-FALL-GEN108-1"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:CS220",
+            "tentative:CS401",
+            "tentative:ELEC004",
+            "tentative:ELEC005",
+            "tentative:ELEC006"
+          ]
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:ELEC007",
+            "tentative:CS360",
+            "tentative:GEN105",
+            "tentative:GEN106",
+            "tentative:GEN107"
+          ]
+        },
+        {
+          "termCode": "2029-SPRING",
+          "selectionIds": [
+            "tentative:CS350",
+            "tentative:CS370",
+            "tentative:GEN109",
+            "tentative:GEN110",
+            "tentative:GEN111",
+            "tentative:GEN112"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 5,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "deadline-trap-3",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:A001"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:Z999"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:B200"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 3,
+      "completionLowerBound": 3
+    }
+  },
+  {
+    "case_id": "deadline-trap-3",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "deadline-trap-3",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:A001"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:Z999"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:B200"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 3,
+      "completionLowerBound": 3
+    }
+  },
+  {
+    "case_id": "deadline-trap-3",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "deadline-trap-3",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:A001"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:Z999"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:B200"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 3,
+      "completionLowerBound": 3
+    }
+  },
+  {
+    "case_id": "deadline-trap-3",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "NO_SOLUTION",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "deadline-trap-4",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:A001"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:Z999"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:B200"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 3,
+      "completionLowerBound": 3
+    }
+  },
+  {
+    "case_id": "deadline-trap-4",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:A001"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:B200"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:Z999"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 4,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "deadline-trap-4",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:A001"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:Z999"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:B200"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 3,
+      "completionLowerBound": 3
+    }
+  },
+  {
+    "case_id": "deadline-trap-4",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:A001"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:B200"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:Z999"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 4,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "deadline-trap-4",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:A001"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:Z999"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": [
+            "tentative:B200"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 3,
+      "completionLowerBound": 3
+    }
+  },
+  {
+    "case_id": "deadline-trap-4",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:A001"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:B200"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:Z999"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 4,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "already-complete",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [],
+      "optimal": true,
+      "completionTerms": 0,
+      "completionLowerBound": 0
+    }
+  },
+  {
+    "case_id": "already-complete",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": 0,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "already-complete",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [],
+      "optimal": true,
+      "completionTerms": 0,
+      "completionLowerBound": 0
+    }
+  },
+  {
+    "case_id": "already-complete",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": 0,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "already-complete",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [],
+      "optimal": true,
+      "completionTerms": 0,
+      "completionLowerBound": 0
+    }
+  },
+  {
+    "case_id": "already-complete",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": 0,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "zero-budget-timeout",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "TIMEOUT",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "zero-budget-timeout",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:A001"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:B200"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:Z999"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 4,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "zero-budget-timeout",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "TIMEOUT",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "zero-budget-timeout",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:A001"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:B200"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:Z999"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 4,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "zero-budget-timeout",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "TIMEOUT",
+      "selections": [],
+      "optimal": false,
+      "completionTerms": null,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "zero-budget-timeout",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:A001"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:B200"
+          ]
+        },
+        {
+          "termCode": "2028-SPRING",
+          "selectionIds": []
+        },
+        {
+          "termCode": "2028-FALL",
+          "selectionIds": [
+            "tentative:Z999"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 4,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "approved-P-repeat",
+    "algorithm": "cp_sat",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:R100"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:C200"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 2,
+      "completionLowerBound": 2
+    }
+  },
+  {
+    "case_id": "approved-P-repeat",
+    "algorithm": "greedy",
+    "repetition": 0,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:R100"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:C200"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 2,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "approved-P-repeat",
+    "algorithm": "cp_sat",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:R100"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:C200"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 2,
+      "completionLowerBound": 2
+    }
+  },
+  {
+    "case_id": "approved-P-repeat",
+    "algorithm": "greedy",
+    "repetition": 1,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:R100"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:C200"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 2,
+      "completionLowerBound": null
+    }
+  },
+  {
+    "case_id": "approved-P-repeat",
+    "algorithm": "cp_sat",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:R100"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:C200"
+          ]
+        }
+      ],
+      "optimal": true,
+      "completionTerms": 2,
+      "completionLowerBound": 2
+    }
+  },
+  {
+    "case_id": "approved-P-repeat",
+    "algorithm": "greedy",
+    "repetition": 2,
+    "result": {
+      "status": "FEASIBLE",
+      "selections": [
+        {
+          "termCode": "2027-SPRING",
+          "selectionIds": [
+            "tentative:R100"
+          ]
+        },
+        {
+          "termCode": "2027-FALL",
+          "selectionIds": [
+            "tentative:C200"
+          ]
+        }
+      ],
+      "optimal": false,
+      "completionTerms": 2,
+      "completionLowerBound": null
+    }
+  }
+]

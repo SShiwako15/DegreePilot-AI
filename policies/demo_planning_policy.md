@@ -1,4 +1,4 @@
-# Northstar University — fictional Planning Policy (2026)
+# Blue Mountain State University — fictional Planning Policy (2026)
 
 > Demonstration data only. These policies are fictional.
 

@@ -82,6 +82,23 @@ public sealed partial class PolicySources
         {
             var first = group.First();
             var document = await db.PolicyDocuments.SingleOrDefaultAsync(d => d.Id == first.DocumentId);
+            // A new manifest can supersede older copies whose academic passages are all
+            // preserved verbatim. Keep their immutable history. Never replace a differing
+            // administrator revision, or restore a seed explicitly retired by publication.
+            if (document is null || document.Status == "approved")
+            {
+                var candidates = await db.PolicyDocuments.Where(d => d.CatalogVersion == first.CatalogVersion &&
+                    d.Status == "approved" && d.Id != first.DocumentId).ToArrayAsync();
+                foreach (var prior in candidates)
+                {
+                    var passages = await db.PolicySections.Where(s => s.DocumentId == prior.Id).ToArrayAsync();
+                    if (passages.Length == 0 || !passages.All(p => group.Any(s =>
+                        s.Id == p.Id && s.Title == p.Title && s.Text == p.Text))) continue;
+                    if (prior.ApprovalHash.Length > 0 && prior.ApprovalHash != DocumentFingerprint(prior, passages)) continue;
+                    prior.Status = "retired";
+                    prior.Revision++;
+                }
+            }
             if (document is null)
             {
                 document = new()

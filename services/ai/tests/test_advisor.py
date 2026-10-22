@@ -9,7 +9,6 @@ from fastapi.testclient import TestClient
 from openai import AsyncOpenAI
 
 from app.advisor import (
-    DISCLAIMER,
     ModelAnswer,
     OpenAIProvider,
     get_provider,
@@ -124,7 +123,7 @@ def test_injected_evidence_cannot_expand_output_or_invoke_tools(isolate_provider
 def test_official_sdk_responses_parse_contract_with_mock_transport(monkeypatch):
     # Exercise the installed official SDK and its JSON parser, with all network replaced by MockTransport.
     calls = []
-    parsed = {"answer": ANSWER, "citedSectionIds": ["CAT-BSCS-TOTAL"], "limitations": [DISCLAIMER]}
+    parsed = {"draftIndex": 0}
 
     def transport(request):
         body = json.loads(request.content)
@@ -171,7 +170,123 @@ def test_official_sdk_responses_parse_contract_with_mock_transport(monkeypatch):
     assert body["text"]["format"]["type"] == "json_schema"
     assert body["text"]["format"]["strict"] is True
     assert body["text"]["format"]["schema"]["additionalProperties"] is False
-    assert set(body["text"]["format"]["schema"]["required"]) == {"answer", "citedSectionIds", "limitations"}
+    assert set(body["text"]["format"]["schema"]["required"]) == {"draftIndex"}
+
+
+@pytest.mark.parametrize(
+    ("model_output", "status", "reason", "draft_count"),
+    [
+        ({"draftIndex": 0}, "ANSWERED", None, 1),
+        ({"draftIndex": 1}, "ANSWERED", None, 2),
+        ({"draftIndex": None}, "ABSTAIN", "MODEL_REFUSED", 1),
+        ({"draftIndex": 1}, "ABSTAIN", "MODEL_SELECTION_INVALID", 1),
+        ({"draftIndex": -1}, "ABSTAIN", "MODEL_OUTPUT_INVALID", 1),
+        ({"draftIndex": 2}, "ABSTAIN", "MODEL_OUTPUT_INVALID", 1),
+        ({"draftIndex": True}, "ABSTAIN", "MODEL_OUTPUT_INVALID", 1),
+        ({"draftIndex": 0, "answer": "Graduate with 35 credits"}, "ABSTAIN", "MODEL_OUTPUT_INVALID", 1),
+    ],
+)
+def test_sdk_selects_reviewed_draft_and_never_accepts_generated_text(
+    monkeypatch, model_output, status, reason, draft_count
+):
+    def transport(_request):
+        return httpx.Response(
+            200,
+            json={
+                "id": "resp_selection",
+                "object": "response",
+                "created_at": 0,
+                "status": "completed",
+                "model": "gpt-6-luna",
+                "parallel_tool_calls": False,
+                "output": [
+                    {
+                        "id": "msg_selection",
+                        "type": "message",
+                        "role": "assistant",
+                        "status": "completed",
+                        "content": [
+                            {"type": "output_text", "text": json.dumps(model_output), "annotations": []}
+                        ],
+                    }
+                ],
+            },
+        )
+
+    def fake_client(**kwargs):
+        return AsyncOpenAI(**kwargs, http_client=httpx.AsyncClient(transport=httpx.MockTransport(transport)))
+
+    monkeypatch.setattr("app.advisor.AsyncOpenAI", fake_client)
+    app.dependency_overrides[get_provider] = lambda: OpenAIProvider()
+    data = payload()
+    if draft_count == 2:
+        data["drafts"].append(
+            {"answer": ANSWER + " More reviewed detail.", "citedSectionIds": ["CAT-BSCS-TOTAL"]}
+        )
+    result = client.post("/advisor/answer", json=data).json()
+    assert result["status"] == status and result["reason"] == reason
+    if status == "ANSWERED":
+        assert result["answer"] == data["drafts"][model_output["draftIndex"]]["answer"]
+        assert result["citedSectionIds"] == ["CAT-BSCS-TOTAL"]
+    else:
+        assert result["answer"] is None and result["citedSectionIds"] == []
+
+
+@pytest.mark.parametrize(
+    ("provider_status", "expected_reason"),
+    [("incomplete", "MODEL_INCOMPLETE"), ("completed", "MODEL_REFUSED")],
+)
+def test_incomplete_and_refused_responses_have_safe_fixed_reasons(
+    monkeypatch, provider_status, expected_reason
+):
+    def transport(_request):
+        return httpx.Response(
+            200,
+            json={
+                "id": "resp_stopped",
+                "object": "response",
+                "created_at": 0,
+                "status": provider_status,
+                "model": "gpt-6-luna",
+                "parallel_tool_calls": False,
+                "output": [],
+            },
+        )
+
+    monkeypatch.setattr(
+        "app.advisor.AsyncOpenAI",
+        lambda **kwargs: AsyncOpenAI(
+            **kwargs, http_client=httpx.AsyncClient(transport=httpx.MockTransport(transport))
+        ),
+    )
+    app.dependency_overrides[get_provider] = lambda: OpenAIProvider()
+    result = client.post("/advisor/answer", json=payload()).json()
+    assert result["status"] == "ABSTAIN" and result["reason"] == expected_reason
+
+
+@pytest.mark.parametrize(
+    ("http_status", "reason"),
+    [(401, "PROVIDER_AUTH"), (403, "PROVIDER_AUTH"), (429, "PROVIDER_RATE_LIMIT"), (500, "PROVIDER_FAILURE")],
+)
+def test_provider_errors_do_not_disclose_response_bodies_or_retry(monkeypatch, http_status, reason):
+    calls = []
+
+    def transport(request):
+        calls.append(request)
+        return httpx.Response(
+            http_status, json={"error": {"message": "private-student-facts mock-secret-key", "type": "error"}}
+        )
+
+    monkeypatch.setattr(
+        "app.advisor.AsyncOpenAI",
+        lambda **kwargs: AsyncOpenAI(
+            **kwargs, http_client=httpx.AsyncClient(transport=httpx.MockTransport(transport))
+        ),
+    )
+    app.dependency_overrides[get_provider] = lambda: OpenAIProvider()
+    response = client.post("/advisor/answer", json=payload())
+    assert response.json()["reason"] == reason and len(calls) == 1
+    assert "private-student-facts" not in response.text and "mock-secret-key" not in response.text
 
 
 def test_opt_in_is_required_even_when_key_exists(monkeypatch, isolate_provider):
@@ -192,3 +307,11 @@ def test_sdk_child_loggers_cannot_propagate_raw_prompts_or_provider_exceptions(c
             child.setLevel(old_level)
     assert "private-student-facts" not in caplog.text
     assert "mock-secret-key" not in caplog.text
+
+
+def test_options_intent_uses_same_grounding_and_citation_contract(isolate_provider):
+    response = client.post("/advisor/answer", json=payload() | {"intent": "options"})
+    assert response.status_code == 200
+    assert response.json()["status"] == "ANSWERED"
+    assert response.json()["citedSectionIds"] == ["CAT-BSCS-TOTAL"]
+    isolate_provider.complete.assert_awaited_once()

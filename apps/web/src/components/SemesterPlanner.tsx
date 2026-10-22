@@ -12,7 +12,7 @@ function PlanSummary({ result }: { result: PlanResult }) {
     <ul className="mt-3 space-y-2 text-xs leading-6 text-bms-muted">{result.issues.map((issue, index) => <li key={index}><strong>{issue.code}</strong>: {issue.message}</li>)}</ul>
     {result.status === 'FEASIBLE' && <>
       <p className="mt-3 text-sm font-semibold text-bms-blue">{result.totalCredits} credits · {result.termCode}{result.id ? ' · Saved' : ''}</p>
-      <p className="mt-3 rounded-lg bg-orange-50 p-3 text-xs leading-6 text-orange-950">{result.tentative ? 'Tentative: based on catalog term patterns. No sections, seat availability, or conflict-free timetable is confirmed.' : 'Validated against current published section data. Seats are not reserved; this is a fictional planning demonstration.'}</p>
+      <p className="mt-3 rounded-lg bg-orange-50 p-3 text-xs leading-6 text-orange-950">{result.tentative ? 'Tentative: based on catalog term patterns. No sections, seat availability, or conflict-free timetable is confirmed.' : 'Validated against current published section data. Seats are not reserved; this is a fictional planning service.'}</p>
       <ul className="mt-4 divide-y divide-slate-100">{result.selections.map(option => <li key={option.id} className="py-3 text-xs leading-6"><strong>{option.sectionCode ?? option.courseCode}</strong> · {option.title} · {option.credits} credits</li>)}</ul>
       {!result.tentative && <div className="mt-5">
         <h3 className="text-sm font-semibold">Weekly timetable · America/New_York</h3>

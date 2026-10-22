@@ -9,6 +9,13 @@
 **/test-results
 **/playwright-report
 .local
+.vscode
+.agents
+.codex
+AGENTS.md
+*_MASTER_PROMPT.md
+prompts
+docs
 docs/screenshots
 **/.venv
 **/__pycache__

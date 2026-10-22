@@ -64,7 +64,7 @@ export function Login({ loading, error, onLogin, onRetry }: {
             <form onSubmit={event => void submit(event)} className="mt-6">
               <div className="overflow-hidden rounded-lg border border-white/50 bg-white text-bms-ink shadow-sm">
                 <div className="relative border-b border-slate-200 px-4 pb-2 pt-3">
-                  <label htmlFor="username" className="block text-[10px] font-medium text-bms-muted">Demo account</label>
+                  <label htmlFor="username" className="block text-[10px] font-medium text-bms-muted">Account</label>
                   <UserRound aria-hidden="true" size={16} className="pointer-events-none absolute right-4 top-4 text-slate-400" />
                   <select id="username" autoComplete="username" value={username} onChange={event => setUsername(event.target.value)} className="min-h-9 w-full cursor-pointer bg-white pr-3 text-sm">
                     <option value="student-ava">Ava Chen · Student</option>
@@ -74,24 +74,24 @@ export function Login({ loading, error, onLogin, onRetry }: {
                   </select>
                 </div>
                 <div className="relative px-4 pb-2 pt-3">
-                  <label htmlFor="password" className="block text-[10px] font-medium text-bms-muted">Demo password</label>
+                  <label htmlFor="password" className="block text-[10px] font-medium text-bms-muted">Password</label>
                   <LockKeyhole aria-hidden="true" size={15} className="pointer-events-none absolute right-4 top-3 text-slate-400" />
                   <input id="password" type={showPassword ? 'text' : 'password'} autoComplete="current-password" required value={password} onChange={event => setPassword(event.target.value)} aria-describedby="password-help" className="min-h-9 w-full rounded-sm bg-white pr-9 text-sm" />
                   <button type="button" aria-label={showPassword ? 'Hide password' : 'Show password'} aria-pressed={showPassword} onClick={() => setShowPassword(value => !value)} className="absolute bottom-1 right-1 flex size-11 cursor-pointer items-center justify-center rounded-md text-bms-muted hover:bg-slate-100">{showPassword ? <EyeOff size={18} /> : <Eye size={18} />}</button>
                 </div>
               </div>
-              <p id="password-help" className="mt-3 text-[11px] leading-5 text-blue-100">Use the local demo password from your setup instructions.</p>
+              <p id="password-help" className="mt-3 text-[11px] leading-5 text-blue-100">Use the local password from your setup instructions.</p>
               {loginError && <ErrorMessage message={loginError} />}
               <button disabled={submitting} className="mt-5 min-h-12 w-full cursor-pointer rounded-lg bg-bms-orange px-5 py-3 text-sm font-bold text-bms-navy shadow-sm hover:bg-orange-400 disabled:cursor-wait disabled:opacity-60">{submitting ? 'Signing in…' : 'Login'}</button>
             </form>
           </>}
           <div className="mt-6 flex gap-2.5 border-t border-white/20 pt-5 text-blue-100">
             <ShieldCheck size={16} className="mt-0.5 shrink-0" />
-            <p className="text-[10px] leading-5">All people, courses and policies in this demo are fictional. Please don’t enter real student records.</p>
+            <p className="text-[10px] leading-5">All people, courses and policies here are fictional. Please don’t enter real student records.</p>
           </div>
         </main>
         <footer className="relative col-span-full flex flex-wrap items-center justify-center gap-x-3 gap-y-1 border-t border-slate-300/40 bg-white/70 px-5 py-3 text-center text-[10px] leading-5 text-slate-600 lg:absolute lg:bottom-0 lg:left-[34%] lg:right-0 lg:border-0 lg:bg-transparent">
-          <span>DegreePilot AI · Unofficial fictional-university demo</span>
+          <span>DegreePilot AI · Unofficial fictional-university application</span>
           <span>Photo: <a href="https://commons.wikimedia.org/wiki/File:Ford_Buildings_-_Berry_College.jpg" target="_blank" rel="noreferrer" className="rounded-sm underline underline-offset-2">Camsjo</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer" className="rounded-sm underline underline-offset-2">CC BY-SA 4.0</a></span>
         </footer>
       </div>

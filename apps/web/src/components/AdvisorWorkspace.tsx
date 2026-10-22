@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { mutate, request } from '../api'
+import { displayCatalogVersion, mutate, request } from '../api'
 import type { Audit, Transcript } from '../api'
 import type { PlanOption, PlanResult, Term } from '../planning'
 import { CoreList, ProgressSummary, TranscriptView } from './AcademicViews'
@@ -59,7 +59,7 @@ export function AdvisorWorkspace() {
       <h2 className="text-lg font-semibold">Assigned students</h2>
       <p className="my-3 text-sm leading-6 text-bms-muted">Read only academic records. Suggest a validated schedule; students retain control of their plans. Assignments are checked on every request.</p>
       {error && <ErrorMessage message={error} />}
-      <label className="block text-sm font-medium">Student<select className={field} value={student} onChange={e => { setStudent(e.target.value); setRecords(null); setSelected([]); setError(''); setNotice('') }}><option value="">Choose an assigned student</option>{students.map(s => <option key={s.id} value={s.id}>{s.displayName} · {s.catalogVersion}</option>)}</select></label>
+      <label className="block text-sm font-medium">Student<select className={field} value={student} onChange={e => { setStudent(e.target.value); setRecords(null); setSelected([]); setError(''); setNotice('') }}><option value="">Choose an assigned student</option>{students.map(s => <option key={s.id} value={s.id}>{s.displayName} · {displayCatalogVersion(s.catalogVersion)}</option>)}</select></label>
       {students.length === 0 && <p role="status" className="mt-3 text-sm">No active assignments.</p>}
       <button className={secondaryButton} onClick={() => { setRecords(null); setError(''); setRefresh(r => r + 1) }}>Refresh assignments and records</button>
     </section>
@@ -82,25 +82,4 @@ export function AdvisorWorkspace() {
       </section>
     </>}
   </div>
-}
-
-interface Suggestion { id: string; advisorId: string; constraints: { termCode: string; minCredits: number; maxCredits: number }; plan: PlanResult }
-export function StudentSuggestions({ studentId }: { studentId: string }) {
-  const [suggestions, setSuggestions] = useState<Suggestion[]>([])
-  const [message, setMessage] = useState('')
-  const [busy, setBusy] = useState(false)
-  const [refresh, setRefresh] = useState(0)
-  useEffect(() => {
-    const controller = new AbortController()
-    request<Suggestion[]>(`/api/students/${encodeURIComponent(studentId)}/suggestions`, { signal: controller.signal })
-      .then(setSuggestions).catch(e => { if (!controller.signal.aborted) setMessage(e.message) })
-    return () => controller.abort()
-  }, [studentId, refresh])
-  async function save(s: Suggestion) {
-    setBusy(true)
-    try { await mutate('/api/plans/save', { constraints: s.constraints, selectionIds: s.plan.selections.map(o => o.id) }); setMessage('Suggestion saved as your plan after fresh validation.') }
-    catch (e) { setMessage(e instanceof Error ? e.message : 'Unable to save suggestion.') }
-    finally { setBusy(false) }
-  }
-  return <section className={`${panel} mt-6`} aria-label="Advisor suggestions"><h2 className="text-lg font-semibold">Advisor suggestions</h2><p className="my-3 text-sm text-bms-muted">Suggestions never change your record. Saving runs the same current academic checks.</p><button className={secondaryButton} onClick={() => setRefresh(r => r + 1)}>Refresh suggestions</button>{suggestions.length === 0 && <p className="text-sm">No suggestions yet.</p>}{suggestions.map(s => <article key={s.id} className="my-3 rounded-lg border border-slate-200 p-4 text-sm"><h3 className="font-semibold">{s.plan.termCode} · {s.plan.totalCredits} credits · {s.plan.status}{s.plan.tentative ? ' · Tentative' : ''}</h3><p className="my-2">{s.plan.selections.map(o => o.sectionCode ?? o.courseCode).join(', ')}</p><button className={secondaryButton} disabled={busy || s.plan.status !== 'FEASIBLE'} onClick={() => void save(s)}>Save suggestion as my plan</button></article>)}{message && <p role="status" className="text-sm">{message}</p>}</section>
 }

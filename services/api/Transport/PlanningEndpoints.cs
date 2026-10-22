@@ -13,6 +13,12 @@ public static class PlanningEndpoints
         var group = app.MapGroup("/api").RequireAuthorization("Student");
         static string Actor(HttpContext c) => c.User.FindFirstValue(ClaimTypes.NameIdentifier)!;
         static IResult Invalid() => Results.Problem(statusCode: 400, title: "Invalid planning request.");
+        group.MapPost("/degree-plans/generate", async (DegreePlanRequest request, HttpContext http, DegreePlanningService service, CancellationToken ct) =>
+        {
+            if (!service.Valid(request)) return Invalid();
+            var result = await service.GenerateAsync(Actor(http), request, ct);
+            return result is null ? Results.NotFound() : Results.Ok(result);
+        }).RequireRateLimiting("PlannerBudget");
 
         group.MapGet("/terms", async (AcademicDbContext db, CancellationToken ct) =>
             Results.Ok((await db.Terms.AsNoTracking().OrderBy(t => t.StartsOn).ToArrayAsync(ct)).Select(PlanningFixtures.ToDomain)));

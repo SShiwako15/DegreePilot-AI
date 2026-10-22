@@ -3,8 +3,8 @@ import type { APIRequestContext, Page } from '@playwright/test'
 
 const password = process.env.DEMO_PASSWORD ?? 'Local-Demo-Only!2026'
 async function login(page: Page, username: string) {
-  await page.getByLabel('Demo account').selectOption(username)
-  await page.getByLabel('Demo password', { exact: true }).fill(password)
+  await page.getByLabel('Account').selectOption(username)
+  await page.getByLabel('Password', { exact: true }).fill(password)
   await page.getByRole('button', { name: 'Login', exact: true }).click()
 }
 async function nav(page: Page) {
@@ -25,7 +25,7 @@ async function a11ySmoke(page: Page) {
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
 }
 
-test('assigned advisor reads Ava and sends a valid suggestion; student explicitly saves it', async ({ page }) => {
+test('assigned advisor sends a valid suggestion; student planner omits advisor suggestions', async ({ page }) => {
   await page.goto('/')
   await login(page, 'advisor-morgan')
   await expect(page.getByRole('heading', { level: 1, name: 'Assigned students' })).toBeVisible()
@@ -50,9 +50,8 @@ test('assigned advisor reads Ava and sends a valid suggestion; student explicitl
   expect((await page.request.get('/api/admin/audit')).status()).toBe(403)
   await nav(page)
   await page.getByRole('link', { name: 'Semester planner' }).click()
-  const suggestions = page.getByRole('region', { name: 'Advisor suggestions' })
-  await suggestions.getByRole('button', { name: 'Save suggestion as my plan' }).first().click()
-  await expect(suggestions.getByRole('status')).toHaveText('Suggestion saved as your plan after fresh validation.')
+  await expect(page.getByRole('region', { name: 'Advisor suggestions' })).toHaveCount(0)
+  await expect(page.getByRole('heading', { name: 'Available eligible sections' })).toBeVisible()
   await a11ySmoke(page)
 })
 

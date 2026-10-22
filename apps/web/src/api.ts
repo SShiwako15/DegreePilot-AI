@@ -1,3 +1,7 @@
+export function displayCatalogVersion(version: string): string {
+  return version.replace(/^NSU(?=-)/, 'BMSU')
+}
+
 export interface Account {
   id: string
   displayName: string

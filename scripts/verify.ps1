@@ -24,9 +24,9 @@ try {
     if ($plannerReady) {
         & $plannerPython -m pytest -q -c services/ai/pyproject.toml services/ai/tests
         if ($LASTEXITCODE -ne 0) { throw 'Planner tests failed.' }
-        & $plannerPython -m ruff check services/ai/app services/ai/tests
+        & $plannerPython -m ruff check --config services/ai/pyproject.toml services/ai/app services/ai/tests scripts/benchmark_degree.py scripts/evaluate_degree_benchmark.py scripts/security_check.py
         if ($LASTEXITCODE -ne 0) { throw 'Planner lint failed.' }
-        & $plannerPython -m ruff format --check services/ai/app services/ai/tests
+        & $plannerPython -m ruff format --check --config services/ai/pyproject.toml services/ai/app services/ai/tests scripts/benchmark_degree.py scripts/evaluate_degree_benchmark.py scripts/security_check.py
         if ($LASTEXITCODE -ne 0) { throw 'Planner format check failed.' }
         & $plannerPython scripts/security_check.py
         if ($LASTEXITCODE -ne 0) { throw 'Privacy scan failed.' }

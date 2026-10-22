@@ -16,9 +16,13 @@ PATTERNS = (
 
 
 def main() -> int:
-    names = subprocess.check_output(
-        ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"], cwd=ROOT
-    ).decode().split("\0")
+    names = (
+        subprocess.check_output(
+            ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"], cwd=ROOT
+        )
+        .decode()
+        .split("\0")
+    )
     failures: set[str] = set()
     scanned = 0
     for name in names:
@@ -40,7 +44,9 @@ def main() -> int:
     if failures:
         print("Potential secret or private environment file: " + ", ".join(sorted(failures)))
         return 1
-    print(f"Privacy scan passed: {scanned} source files plus frontend bundle; no high-confidence key patterns.")
+    print(
+        f"Privacy scan passed: {scanned} source files plus frontend bundle; no high-confidence key patterns."
+    )
     return 0
 
 

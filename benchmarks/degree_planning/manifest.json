@@ -1,0 +1,53 @@
+{
+  "synthetic_only": true,
+  "generated_at": "2026-10-21T18:40:25.446866+00:00",
+  "cases": 22,
+  "repetitions": 3,
+  "dataset_sha256": "8bfe27db89c1e9dc183f9d1b3ac1389fbe1288c80b5819c54d5ff4afdcf17c43",
+  "source_sha256": {
+    "scripts/benchmark_degree.py": "e5db3d04733f1c42968c41fcc459612f93957498c938f5bde72449821a840cb2",
+    "services/ai/app/degree_models.py": "166e7851f94feae61b6806da0122073c2c53d3830b1a6ee5aa765b59c4cd1577",
+    "services/ai/app/degree_solver.py": "e500cf7d8bfefa90dab23f6d0512d149091e87644ebfbad8f97114d13a0dce4c",
+    "services/ai/app/degree_validator.py": "51fa15ccc7c7e22cf4c9a27ca8a461ccb88af5b68545bbd9d6b9be0bbd9e036b",
+    "data/program.json": "05bf512b4806b7ee40da710c8044342bd44a3f2e05008f31e534d1b0ae6c03f6",
+    "data/courses.json": "a1aac63e148994c859bae1cba174e5023344dff90f945d1e4ad10828a836fe33",
+    "data/students.json": "c3558bdc71f528110897109ca286683e620f5f17bcd36198dcf9385a661224b8",
+    "data/terms.json": "fea60970e61e04cb7d3519ff1f96a5b71bb96e2fdd6b17e73a55a6ec2159f53e",
+    "data/sections.json": "41cd42c86f35e07cd7ff3f9dfef1b9ac5ee1469454e0c6f0264328a81d093c1f"
+  },
+  "python": "3.12.10",
+  "ortools": "9.15.6755",
+  "os": "Windows",
+  "machine": "AMD64",
+  "processor": "AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD",
+  "logical_cpus": 12,
+  "solver_seed": 0,
+  "solver_workers": 1,
+  "solve_bound_seconds": 2,
+  "timing": "perf_counter_ns; model construction and solving included; validation and IO excluded; one untimed warmup",
+  "summary": {
+    "cp_sat": {
+      "runs": 66,
+      "feasible": 42,
+      "statuses": {
+        "FEASIBLE": 42,
+        "INFEASIBLE": 21,
+        "TIMEOUT": 3
+      },
+      "median_ms": 27.840049999999998,
+      "max_ms": 169.0323
+    },
+    "greedy": {
+      "runs": 66,
+      "feasible": 27,
+      "statuses": {
+        "FEASIBLE": 27,
+        "NO_SOLUTION": 39
+      },
+      "median_ms": 1.6622,
+      "max_ms": 2.0083
+    }
+  },
+  "invariant_violations": 0,
+  "warning": "Invented curriculum and transcripts. This dataset is not evidence about real graduation outcomes."
+}

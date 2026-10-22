@@ -26,10 +26,17 @@ __pycache__/
 
 # Tooling/editor
 .DS_Store
-.vscode/*.log
+.vscode/
 .idea/
 playwright-report/
 test-results/
+
+# Local development instructions
+.agents/
+.codex/
+AGENTS.md
+*_MASTER_PROMPT.md
+prompts/
 
 # Local runtime data
 *.db

@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace DegreePilot.Api.Tests;
 
-public sealed class StubAdvisor(bool available = true, string? attack = null) : IAdvisorClient
+public sealed class StubAdvisor(bool available = true, string? attack = null, string? reason = null) : IAdvisorClient
 {
     public List<AdvisorEnvelope> Requests { get; } = [];
     public Func<Task>? DuringAnswer { get; set; }
@@ -19,6 +19,7 @@ public sealed class StubAdvisor(bool available = true, string? attack = null) : 
     {
         Requests.Add(request);
         if (DuringAnswer is not null) await DuringAnswer();
+        if (reason is not null) return new(reason.StartsWith("PROVIDER_", StringComparison.Ordinal) ? "UNAVAILABLE" : "ABSTAIN", null, [], [], reason);
         var draft = request.Drafts[0];
         return new ProviderReply("ANSWERED",
             attack == "invent" ? "You have 120 credits and can graduate." : draft.Answer,
@@ -32,6 +33,26 @@ public sealed record AdvisorEval(string Id, string StudentId, string Question, s
 
 public class AdvisorApiTests
 {
+    [Theory]
+    [InlineData("PROVIDER_AUTH", "UNAVAILABLE", "credentials")]
+    [InlineData("PROVIDER_RATE_LIMIT", "UNAVAILABLE", "quota")]
+    [InlineData("MODEL_INCOMPLETE", "ABSTAIN", "incomplete response")]
+    [InlineData("MODEL_SELECTION_INVALID", "ABSTAIN", "failed validation")]
+    [InlineData("private-student-facts mock-secret-key", "ABSTAIN", "No trusted answer")]
+    public async Task ProviderFailureReasonsAreMappedToSafeMessages(string reason, string status, string expected)
+    {
+        await using var factory = new AcademicApiFactory(advisor: new StubAdvisor(reason: reason));
+        using var student = factory.CreateClient();
+        await SignIn(student);
+        var result = await (await student.PostAsJsonAsync("/api/advisor/chat", new ChatRequest("Can I graduate?"))).Content.ReadFromJsonAsync<ChatResult>();
+        Assert.Equal(status, result!.Status);
+        Assert.Contains(expected, result.Answer);
+        Assert.DoesNotContain("mock-secret-key", result.Answer);
+        Assert.DoesNotContain("private-student-facts", result.Answer);
+        Assert.Empty(result.Citations);
+        Assert.Equal(35, (await student.GetFromJsonAsync<DegreeAudit>("/api/students/me/degree-audit"))!.EarnedCredits);
+    }
+
     [Theory]
     [InlineData("contradiction")]
     [InlineData("injection")]
@@ -68,7 +89,7 @@ public class AdvisorApiTests
     {
         PolicyCitation[] evidence = [new("CAT-BSCS-TOTAL", "NSU-BSCS-2026", "Catalog", 2, "Total", new string('A', 3000)),
             new("CAT-GRADUATION", "NSU-BSCS-2026", "Catalog", 2, "Graduation", new string('B', 3000))];
-        var drafts = AdvisorRules.BuildDrafts(["You have 35 of the required 120 unique earned credits."], evidence, true);
+        var drafts = AdvisorRules.BuildDrafts(["You have 35 of the required 120 unique earned credits."], evidence);
         Assert.NotEmpty(drafts);
         Assert.All(drafts, d => { Assert.InRange(d.Answer.Length, 1, 6000); Assert.Contains("35", d.Answer); Assert.Equal(2, d.CitedSectionIds.Length); });
         Assert.All(evidence, e => Assert.Equal(3000, e.Quote.Length));
@@ -125,6 +146,26 @@ public class AdvisorApiTests
         foreach (var forbidden in new[] { "student-ava", "Ava", "@", "Transcript", "Password", "CS101" })
             Assert.DoesNotContain(forbidden, payload);
         Assert.Equal(HttpStatusCode.NotFound, (await client.GetAsync("/api/policies/sections/FAKE-ID")).StatusCode);
+    }
+
+    [Fact]
+    public async Task ComputerNetworksTitleRoutesToPinnedCs350PrerequisiteRule()
+    {
+        var provider = new StubAdvisor();
+        await using var factory = new AcademicApiFactory(advisor: provider);
+        using var client = factory.CreateClient();
+        await SignIn(client);
+
+        var result = await (await client.PostAsJsonAsync("/api/advisor/chat",
+            new ChatRequest("What classes should I take before Computer Networks?")))
+            .Content.ReadFromJsonAsync<ChatResult>();
+
+        Assert.Equal("ANSWERED", result!.Status);
+        Assert.Contains("CS201", result.Answer);
+        var citation = Assert.Single(result.Citations);
+        Assert.Equal("CAT-PREREQ-CS350", citation.PolicySectionId);
+        Assert.Contains("CS201 Data Structures", citation.Quote);
+        Assert.Equal("eligibility", Assert.Single(provider.Requests).Intent);
     }
 
     [Fact]
@@ -188,7 +229,7 @@ public class AdvisorApiTests
         Assert.Equal(35, (await client.GetFromJsonAsync<DegreeAudit>("/api/students/me/degree-audit"))!.EarnedCredits);
         Assert.Equal(10, (await client.GetFromJsonAsync<StudentTranscript>("/api/students/me/transcript"))!.Attempts.Count);
         Assert.Empty((await client.GetFromJsonAsync<PlanResult[]>("/api/students/me/plans"))!);
-        Assert.Equal(9, (await client.GetFromJsonAsync<PolicyCitation[]>("/api/policies"))!.Length);
+        Assert.Equal(11, (await client.GetFromJsonAsync<PolicyCitation[]>("/api/policies"))!.Length);
         Assert.Equal(HttpStatusCode.BadRequest, (await client.PostAsJsonAsync("/api/advisor/chat", new ChatRequest(new string('x', 1001)))).StatusCode);
     }
 

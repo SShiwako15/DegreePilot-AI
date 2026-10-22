@@ -24,7 +24,7 @@ export function UniversityLogo({ className = 'size-16' }: { className?: string }
 }
 
 export function DemoBadge() {
-  return <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-bms-sky px-3 py-1.5 text-[10px] font-semibold tracking-wide text-bms-blue"><span className="size-1.5 rounded-full bg-bms-orange" /> Demo environment</span>
+  return <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-bms-sky px-3 py-1.5 text-[10px] font-semibold tracking-wide text-bms-blue"><span className="size-1.5 rounded-full bg-bms-orange" /> Fictional academic records</span>
 }
 
 export function SkipLink() {
