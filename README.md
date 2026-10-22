@@ -4,6 +4,8 @@ An academic advising application with deterministic degree audits, course eligib
 
 The interface is themed around **Blue Mountain State University**, the fictional university from the television series. All people, transcripts, courses, and policies are fabricated. This is an unofficial demonstration, not official academic advice.
 
+## Demo
+
 ## Run locally
 
 Install Docker Desktop with Linux containers, then run from the repository root:
@@ -34,7 +36,7 @@ flowchart LR
   ORM --> PG[(PostgreSQL 17)]
   API --> Planner[Private FastAPI service]
   Planner --> Solver[Bounded OR-Tools solver]
-  Planner -. Optional explanations .-> OpenAI[OpenAI Responses API]
+  Planner --> OpenAI[OpenAI Responses API]
 ```
 
 | Directory | Responsibility |
@@ -42,7 +44,7 @@ flowchart LR
 | [apps/web](apps/web) | React, TypeScript, Vite, and Tailwind UI; role-specific workspaces |
 | [services/api/degreepilot_api](services/api/degreepilot_api) | FastAPI routes, deterministic academic rules, authorization, administration, and grounded advising |
 | [services/api/migrations](services/api/migrations) | Alembic schema migrations with adoption of the existing database |
-| [services/ai](services/ai) | Private planning service and optional grounded explanations |
+| [services/ai](services/ai) | Private planning service and grounded explanations |
 | [tests/api](tests/api) | Domain, HTTP, authorization, migration, and database tests |
 | [benchmarks/degree_planning](benchmarks/degree_planning) | Synthetic benchmark inputs, results, traces, and analysis |
 
