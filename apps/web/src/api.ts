@@ -56,7 +56,7 @@ export async function request<T>(path: string, options: RequestInit = {}): Promi
 }
 
 export async function mutate<T = void>(path: string, body?: unknown, signal?: AbortSignal) {
-  // Fetch after each identity change: ASP.NET binds antiforgery tokens to the actor.
+  // Refresh after each identity change: CSRF tokens belong to the current session.
   const { token } = await request<{ token: string }>('/api/auth/csrf', { signal })
   return request<T>(path, {
     method: 'POST', signal, headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': token },

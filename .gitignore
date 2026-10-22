@@ -12,7 +12,7 @@ coverage/
 .vite/
 *.tsbuildinfo
 
-# .NET
+# Legacy local build artifacts
 **/bin/
 **/obj/
 **/TestResults/

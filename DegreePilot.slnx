@@ -1,9 +1,0 @@
-<Solution>
-  <Folder Name="/services/" />
-  <Folder Name="/services/api/">
-    <Project Path="services/api/DegreePilot.Api.csproj" />
-  </Folder>
-  <Folder Name="/tests/">
-    <Project Path="tests/DegreePilot.Api.Tests/DegreePilot.Api.Tests.csproj" />
-  </Folder>
-</Solution>

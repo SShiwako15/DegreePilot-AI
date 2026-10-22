@@ -1,0 +1,3337 @@
+{
+  "rulesFingerprint": "98BA2B8650900719FBC83533516CAEE40F6D053766FD5D3D3A20182BA9A1AB70",
+  "passwordHash": "AQAAAAIAAYagAAAAEKYPnOt7snbsqAZ3O1rJzRGZ\u002B9IKEB7oUmWz7P/tcCX8JqZPZjcCtjUFw1Bn3YdCsA==",
+  "students": [
+    {
+      "id": "student-ava",
+      "audit": {
+        "status": "valid",
+        "catalogVersion": "NSU-BSCS-2026",
+        "ruleEngineVersion": "1.0.0",
+        "generatedAt": "2026-10-22T00:31:23.3330743+00:00",
+        "earnedCredits": 35,
+        "requiredCredits": 120,
+        "gpa": 3.37,
+        "degreeComplete": false,
+        "buckets": [
+          {
+            "id": "core",
+            "label": "Required core",
+            "earned": 23,
+            "required": 44,
+            "remaining": 21,
+            "complete": false
+          },
+          {
+            "id": "cs_elective",
+            "label": "CS electives",
+            "earned": 0,
+            "required": 12,
+            "remaining": 12,
+            "complete": false
+          },
+          {
+            "id": "gen_ed",
+            "label": "General education",
+            "earned": 12,
+            "required": 36,
+            "remaining": 24,
+            "complete": false
+          },
+          {
+            "id": "free_elective",
+            "label": "Free electives",
+            "earned": 0,
+            "required": 28,
+            "remaining": 28,
+            "complete": false
+          }
+        ],
+        "coreRequirements": [
+          {
+            "code": "CS101",
+            "title": "Introduction to Programming",
+            "credits": 4,
+            "complete": true,
+            "grade": "A",
+            "term": "2025-FALL"
+          },
+          {
+            "code": "CS102",
+            "title": "Object-Oriented Programming",
+            "credits": 4,
+            "complete": true,
+            "grade": "B",
+            "term": "2026-SPRING"
+          },
+          {
+            "code": "CS201",
+            "title": "Data Structures",
+            "credits": 4,
+            "complete": true,
+            "grade": "A",
+            "term": "2026-FALL"
+          },
+          {
+            "code": "CS210",
+            "title": "Computer Organization",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "CS220",
+            "title": "Software Engineering Fundamentals",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "CS301",
+            "title": "Design and Analysis of Algorithms",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "CS310",
+            "title": "Operating Systems",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "CS330",
+            "title": "Database Systems",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "CS401",
+            "title": "Senior Capstone",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "MATH151",
+            "title": "Calculus I",
+            "credits": 4,
+            "complete": true,
+            "grade": "B",
+            "term": "2025-FALL"
+          },
+          {
+            "code": "MATH152",
+            "title": "Calculus II",
+            "credits": 4,
+            "complete": true,
+            "grade": "C",
+            "term": "2026-SPRING"
+          },
+          {
+            "code": "MATH250",
+            "title": "Discrete Mathematics",
+            "credits": 3,
+            "complete": true,
+            "grade": "A",
+            "term": "2026-FALL"
+          },
+          {
+            "code": "STAT201",
+            "title": "Applied Statistics",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          }
+        ],
+        "earnedCourses": [
+          {
+            "code": "CS101",
+            "credits": 4,
+            "category": "core",
+            "grade": "A",
+            "term": "2025-FALL"
+          },
+          {
+            "code": "CS102",
+            "credits": 4,
+            "category": "core",
+            "grade": "B",
+            "term": "2026-SPRING"
+          },
+          {
+            "code": "CS201",
+            "credits": 4,
+            "category": "core",
+            "grade": "A",
+            "term": "2026-FALL"
+          },
+          {
+            "code": "GEN101",
+            "credits": 3,
+            "category": "gen_ed",
+            "grade": "A",
+            "term": "2025-FALL"
+          },
+          {
+            "code": "GEN102",
+            "credits": 3,
+            "category": "gen_ed",
+            "grade": "B",
+            "term": "2025-FALL"
+          },
+          {
+            "code": "GEN103",
+            "credits": 3,
+            "category": "gen_ed",
+            "grade": "A",
+            "term": "2026-SPRING"
+          },
+          {
+            "code": "GEN104",
+            "credits": 3,
+            "category": "gen_ed",
+            "grade": "B",
+            "term": "2026-SPRING"
+          },
+          {
+            "code": "MATH151",
+            "credits": 4,
+            "category": "core",
+            "grade": "B",
+            "term": "2025-FALL"
+          },
+          {
+            "code": "MATH152",
+            "credits": 4,
+            "category": "core",
+            "grade": "C",
+            "term": "2026-SPRING"
+          },
+          {
+            "code": "MATH250",
+            "credits": 3,
+            "category": "core",
+            "grade": "A",
+            "term": "2026-FALL"
+          }
+        ],
+        "issues": []
+      },
+      "terms": [
+        {
+          "code": "2027-SPRING",
+          "eligibility": [
+            {
+              "courseCode": "CS101",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS102",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS201",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS210",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS220",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "CS301",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "CS310",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "CS330",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS401",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS301"
+                ],
+                [
+                  "CS310"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS301 with C or better before 2027-SPRING."
+                },
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS310 with C or better before 2027-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH151",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH152",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH250",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "STAT201",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "CS350",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "CS360",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS220"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS220 with C or better before 2027-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS370",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS301"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS301 with C or better before 2027-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS380",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS310"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS310 with C or better before 2027-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN101",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN102",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN103",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN104",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN105",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN106",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN107",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN108",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN109",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN110",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN111",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN112",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC001",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC002",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC003",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC004",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC005",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC006",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC007",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "2027-FALL",
+          "eligibility": [
+            {
+              "courseCode": "CS101",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS102",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS201",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS210",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "CS220",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS301",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS310",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS330",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "CS401",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS301"
+                ],
+                [
+                  "CS310"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS301 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS310 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH151",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH152",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH250",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "STAT201",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS350",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS360",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS220"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS220 with C or better before 2027-FALL."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS370",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS301"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS301 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS380",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS310"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS310 with C or better before 2027-FALL."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN101",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN102",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN103",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN104",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN105",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN106",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN107",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN108",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN109",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN110",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN111",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN112",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC001",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC002",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC003",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC004",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC005",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC006",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC007",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "2028-SPRING",
+          "eligibility": [
+            {
+              "courseCode": "CS101",
+              "status": "completed",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS102",
+              "status": "completed",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS201",
+              "status": "completed",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS210",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "The catalog does not advertise this term pattern."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS220",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "CS301",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "CS310",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "CS330",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "The catalog does not advertise this term pattern."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS401",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS301"
+                ],
+                [
+                  "CS310"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS301 with C or better before 2028-SPRING."
+                },
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS310 with C or better before 2028-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH151",
+              "status": "completed",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH152",
+              "status": "completed",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH250",
+              "status": "completed",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "STAT201",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "CS350",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "CS360",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS220"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS220 with C or better before 2028-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "The catalog does not advertise this term pattern."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS370",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS301"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS301 with C or better before 2028-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS380",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS310"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS310 with C or better before 2028-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "The catalog does not advertise this term pattern."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN101",
+              "status": "completed",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN102",
+              "status": "completed",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN103",
+              "status": "completed",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN104",
+              "status": "completed",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN105",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN106",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN107",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN108",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN109",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN110",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN111",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN112",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC001",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC002",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC003",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC004",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC005",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC006",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC007",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "student-noah",
+      "audit": {
+        "status": "valid",
+        "catalogVersion": "NSU-BSCS-2026",
+        "ruleEngineVersion": "1.0.0",
+        "generatedAt": "2026-10-22T00:31:23.3701739+00:00",
+        "earnedCredits": 7,
+        "requiredCredits": 120,
+        "gpa": 2.64,
+        "degreeComplete": false,
+        "buckets": [
+          {
+            "id": "core",
+            "label": "Required core",
+            "earned": 4,
+            "required": 44,
+            "remaining": 40,
+            "complete": false
+          },
+          {
+            "id": "cs_elective",
+            "label": "CS electives",
+            "earned": 0,
+            "required": 12,
+            "remaining": 12,
+            "complete": false
+          },
+          {
+            "id": "gen_ed",
+            "label": "General education",
+            "earned": 3,
+            "required": 36,
+            "remaining": 33,
+            "complete": false
+          },
+          {
+            "id": "free_elective",
+            "label": "Free electives",
+            "earned": 0,
+            "required": 28,
+            "remaining": 28,
+            "complete": false
+          }
+        ],
+        "coreRequirements": [
+          {
+            "code": "CS101",
+            "title": "Introduction to Programming",
+            "credits": 4,
+            "complete": true,
+            "grade": "A",
+            "term": "2026-SPRING"
+          },
+          {
+            "code": "CS102",
+            "title": "Object-Oriented Programming",
+            "credits": 4,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "CS201",
+            "title": "Data Structures",
+            "credits": 4,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "CS210",
+            "title": "Computer Organization",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "CS220",
+            "title": "Software Engineering Fundamentals",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "CS301",
+            "title": "Design and Analysis of Algorithms",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "CS310",
+            "title": "Operating Systems",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "CS330",
+            "title": "Database Systems",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "CS401",
+            "title": "Senior Capstone",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "MATH151",
+            "title": "Calculus I",
+            "credits": 4,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "MATH152",
+            "title": "Calculus II",
+            "credits": 4,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "MATH250",
+            "title": "Discrete Mathematics",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          },
+          {
+            "code": "STAT201",
+            "title": "Applied Statistics",
+            "credits": 3,
+            "complete": false,
+            "grade": null,
+            "term": null
+          }
+        ],
+        "earnedCourses": [
+          {
+            "code": "CS101",
+            "credits": 4,
+            "category": "core",
+            "grade": "A",
+            "term": "2026-SPRING"
+          },
+          {
+            "code": "GEN101",
+            "credits": 3,
+            "category": "gen_ed",
+            "grade": "B",
+            "term": "2026-FALL"
+          }
+        ],
+        "issues": []
+      },
+      "terms": [
+        {
+          "code": "2027-SPRING",
+          "eligibility": [
+            {
+              "courseCode": "CS101",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS102",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS201",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS102"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS102 with C or better before 2027-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS210",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS102"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS102 with C or better before 2027-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS220",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2027-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS301",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ],
+                [
+                  "MATH250",
+                  "STAT201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2027-SPRING."
+                },
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete MATH250 or STAT201 with C or better before 2027-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS310",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2027-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS330",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2027-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS401",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS301"
+                ],
+                [
+                  "CS310"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS301 with C or better before 2027-SPRING."
+                },
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS310 with C or better before 2027-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH151",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH152",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "MATH151"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete MATH151 with C or better before 2027-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH250",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "MATH151"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete MATH151 with C or better before 2027-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "STAT201",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "MATH151"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete MATH151 with C or better before 2027-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS350",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2027-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS360",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS220"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS220 with C or better before 2027-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS370",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS301"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS301 with C or better before 2027-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS380",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS310"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS310 with C or better before 2027-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN101",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN102",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN103",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN104",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN105",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN106",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN107",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN108",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN109",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN110",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN111",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN112",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC001",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC002",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC003",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC004",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC005",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC006",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC007",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "2027-FALL",
+          "eligibility": [
+            {
+              "courseCode": "CS101",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS102",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS201",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS102"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS102 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS210",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS102"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS102 with C or better before 2027-FALL."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS220",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS301",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ],
+                [
+                  "MATH250",
+                  "STAT201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete MATH250 or STAT201 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS310",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS330",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2027-FALL."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS401",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS301"
+                ],
+                [
+                  "CS310"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS301 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS310 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH151",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH152",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "MATH151"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete MATH151 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH250",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "MATH151"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete MATH151 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "STAT201",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "MATH151"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete MATH151 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS350",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS360",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS220"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS220 with C or better before 2027-FALL."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS370",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS301"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS301 with C or better before 2027-FALL."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS380",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS310"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS310 with C or better before 2027-FALL."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN101",
+              "status": "completed",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN102",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN103",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN104",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN105",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN106",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN107",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN108",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN109",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN110",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN111",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN112",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC001",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC002",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC003",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC004",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC005",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC006",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "ELEC007",
+              "status": "not_offered",
+              "eligible": false,
+              "tentative": false,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "No published section exists for this term."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "2028-SPRING",
+          "eligibility": [
+            {
+              "courseCode": "CS101",
+              "status": "completed",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS102",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "CS201",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS102"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS102 with C or better before 2028-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS210",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS102"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS102 with C or better before 2028-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "The catalog does not advertise this term pattern."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS220",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2028-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS301",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ],
+                [
+                  "MATH250",
+                  "STAT201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2028-SPRING."
+                },
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete MATH250 or STAT201 with C or better before 2028-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS310",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2028-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS330",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2028-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "The catalog does not advertise this term pattern."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS401",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS301"
+                ],
+                [
+                  "CS310"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS301 with C or better before 2028-SPRING."
+                },
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS310 with C or better before 2028-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH151",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "MATH152",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "MATH151"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete MATH151 with C or better before 2028-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "MATH250",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "MATH151"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete MATH151 with C or better before 2028-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "STAT201",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "MATH151"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete MATH151 with C or better before 2028-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS350",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS201"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS201 with C or better before 2028-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS360",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS220"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS220 with C or better before 2028-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "The catalog does not advertise this term pattern."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS370",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS301"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS301 with C or better before 2028-SPRING."
+                }
+              ]
+            },
+            {
+              "courseCode": "CS380",
+              "status": "blocked",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [
+                [
+                  "CS310"
+                ]
+              ],
+              "reasons": [
+                {
+                  "code": "MISSING_PREREQUISITE",
+                  "message": "Complete CS310 with C or better before 2028-SPRING."
+                },
+                {
+                  "code": "NOT_OFFERED",
+                  "message": "The catalog does not advertise this term pattern."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN101",
+              "status": "completed",
+              "eligible": false,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": [
+                {
+                  "code": "ALREADY_COMPLETED",
+                  "message": "Completed with C or better before this term."
+                }
+              ]
+            },
+            {
+              "courseCode": "GEN102",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN103",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN104",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN105",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN106",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN107",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN108",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN109",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN110",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN111",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "GEN112",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC001",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC002",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC003",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC004",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC005",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC006",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            },
+            {
+              "courseCode": "ELEC007",
+              "status": "eligible",
+              "eligible": true,
+              "tentative": true,
+              "missingPrerequisiteGroups": [],
+              "reasons": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "id": "NSU-BSCS-2026:demo_catalog:3",
+      "hash": "83C334BD01044057FB510512E0E0A779219362C4791CCDBD53518909AC7E0922"
+    },
+    {
+      "id": "NSU-BSCS-2026:demo_planning_policy:3",
+      "hash": "022C3F6318C3805ECD0C3A0959FDB93FA4A03C5F71A4F6CC3F748AD778C12C82"
+    }
+  ]
+}

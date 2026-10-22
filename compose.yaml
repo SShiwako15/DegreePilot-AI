@@ -20,18 +20,21 @@ services:
       context: .
       dockerfile: services/api/Dockerfile
     environment:
-      ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_HTTP_PORTS: 8080
-      ConnectionStrings__Database: Host=postgres;Database=${POSTGRES_DB:-degreepilot};Username=${POSTGRES_USER:-degreepilot};Password=${POSTGRES_PASSWORD:-local-fictional-database-only}
-      Demo__Enabled: "true"
-      Demo__Password: ${DEMO_PASSWORD:-Local-Demo-Only!2026}
-      Planner__BaseUrl: http://planner:8000/
+      APP_ENV: Development
+      DB_HOST: postgres
+      DB_NAME: ${POSTGRES_DB:-degreepilot}
+      DB_USER: ${POSTGRES_USER:-degreepilot}
+      DB_PASSWORD: ${POSTGRES_PASSWORD:-local-fictional-database-only}
+      DEMO_ENABLED: "true"
+      DEMO_PASSWORD: ${DEMO_PASSWORD:-Local-Demo-Only!2026}
+      SESSION_SECRET: ${SESSION_SECRET:-}
+      PLANNER_URL: http://planner:8000/
       Security__LoginRequestsPerMinute: ${Security__LoginRequestsPerMinute:-20}
     depends_on:
       postgres:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "curl", "--fail", "--silent", "http://localhost:8080/health/ready"]
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health/ready', timeout=2)"]
       interval: 10s
       timeout: 5s
       retries: 12

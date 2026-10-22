@@ -1,18 +1,13 @@
-FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
-WORKDIR /src
-COPY global.json Directory.Build.props ./
-COPY services/api/DegreePilot.Api.csproj services/api/
-RUN dotnet restore services/api/DegreePilot.Api.csproj
-COPY services/api/ services/api/
-COPY data/ data/
-COPY policies/ policies/
-RUN dotnet publish services/api/DegreePilot.Api.csproj -c Release -o /out --no-restore
-
-FROM mcr.microsoft.com/dotnet/aspnet:10.0
-USER root
-RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
-WORKDIR /app
-COPY --from=build /out .
-USER $APP_UID
+﻿FROM python:3.12-slim
+WORKDIR /workspace
+COPY services/api/requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+COPY services/api/degreepilot_api ./services/api/degreepilot_api
+COPY services/api/alembic.ini ./services/api/alembic.ini
+COPY services/api/migrations ./services/api/migrations
+COPY data ./data
+COPY policies ./policies
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONPATH=/workspace/services/api
+USER 10001
 EXPOSE 8080
-ENTRYPOINT ["dotnet", "DegreePilot.Api.dll"]
+CMD ["python", "-m", "uvicorn", "degreepilot_api.main:app", "--host", "0.0.0.0", "--port", "8080", "--no-access-log", "--no-proxy-headers"]
